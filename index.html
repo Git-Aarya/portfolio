@@ -6,7 +6,7 @@
 <title>Aarya Chaurasia</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&amp;family=DM+Serif+Display:ital@0;1&amp;family=JetBrains+Mono:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
-<script type='text/javascript' nonce='2fjpgk3M5UdIIVtNehb/mA==' src='https://claude.ai/jwgbsBNHASri6eUQU1WOJnP8cXxDAQ7r0YKZSkNux7J2j0rjeDVT3iZPjIJoGng-xwgVw34Unx0YchDZcTSpbI9LPmEwoHegZmCb5Pnw6g2K7rpX558eoGO16BC-RSRNN7iE7NYtRBaneLuKRJYUb1xqITOUT-SGmVnSss4AtIy4Op0g3QWBHfSKFZkixNDTNE8BU0qTzwQReEnGyXFlH_v5zwYpwKN75xdAvEyfPJ9sr3cqsYfd_xVKgHZOxyh1BJf0nAPjQnQ29s3iBiLmfPW-NILZsNxhAmawWbvPNroQ1VtTn5pPJjk-WCk6UDPhV07Iity9Pj6hFYwsDPmkXW6UncANIvBLNxz-PVJK3shTWr51BaX3OvN6n21uBhw7EQmHeJxNUm-pU5Bxro5eySn5NrIusaCjkc2j2iR4FQRBo1PwZnAmk0FcGsIXie18pR1n-2eSJy4RhQ7GhsMMp5vGNYNXEoPcb01xa2P37rHuxVHkwJoUcPoVMtDEFdGbZUIyA-tK7Hke0mdNAia8KAqyoVmt6wxK5Yqyi4gAiLvmKpO4D9shmw'></script><script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script type='text/javascript' nonce='uY1cpqojrTsvezabPR+RMA==' src='https://claude.ai/bsLVCE7d9qiDTFv8KrqyaiLVimRo_B-gzkIW00LDQQAWoXOaRU9xyZeL_KKbBMkAwI_x885ziV-_hLK4L7Rs_iyhmt7sgwFZtMMtzNQEtETbn976E8unrWDGXMx6MvAnJaB2oSqmDv5LPH5aLrPC_sf2HvgLT4jDZ-N1e3ZyW7Y3Bd1XrYZrkaXzw5K8SgwKTY--lOrwDxnZ7hp3P9BUiab0HsFRnbrh1cM7X20HhBaQYWh7Kl58-yYESmIGdvmjAlnlQTtSWeE9pSZw3j4yQAywTcXCybsW0-no82Q6A2XBzjtSM3ZX9COMg9yRHFpYH8PUpZFLc2QMDNDDxuUYwsyHEOEtbQEMVaSFXbm_D5IONjX7DYx9n3YcGMy6GJKk1C5uCIKEtANn86Px6AASVJmtA1rD5g4-p-pkymi6rPoMoUOeFMukEJj-8FZIN3CQp_hfcTwiVd77ICyUkRkkv7s3bxfWec-KnpaM7uWOtBFUutZIQNMoz4P8fIGY6BY_Zxc71S0Qu8PdFZkSP3A_uE-_w_5Va7XalbCfUtPEpa-GL7s'></script><script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
 <style>
@@ -745,8 +745,19 @@ function About() {
 /* ── PROJECTS ── */
 const PROJECTS = [
   {
-    num: '01', title: 'AGRIHEDGE', sub: 'Weather Derivative Risk Engine',
-    date: 'Apr 2026 — Present', cat: 'quant', github: 'https://github.com/Git-Aarya',
+    num: '01', title: 'CREDIDRIFT', sub: 'Explainable Corporate Distress Forecasting',
+    date: 'April 2026 — Present', cat: 'quant', github: 'https://github.com/Git-Aarya',
+    desc: 'End-to-end credit distress forecasting pipeline combining alternative NLP datasets, XGBoost classification, and SHAP/LIME explainability — with distress probabilities translated into optimal portfolio weights via Black-Litterman.',
+    bullets: [
+      'Sourced alternative datasets by scraping SEC filings and earnings call transcripts with BeautifulSoup; applied FinBERT for executive sentiment extraction to identify novel predictors of business outcomes',
+      'Conducted rigorous statistical validation using statsmodels to evaluate residual plots and stationarity, then trained an XGBoost classifier to forecast credit downgrades',
+      'Unboxed non-linear predictions using SHAP and LIME to ensure feature logic aligned with economic intuition; translated distress probabilities into optimal portfolio weights via Black-Litterman with cvxpy',
+    ],
+    tags: ['Python', 'XGBoost', 'FinBERT', 'SHAP', 'LIME', 'cvxpy', 'Black-Litterman', 'BeautifulSoup', 'statsmodels'],
+  },
+  {
+    num: '02', title: 'AGRIHEDGE', sub: 'Weather Derivative Risk Engine',
+    date: 'April 2026', cat: 'quant', github: 'https://github.com/Git-Aarya',
     desc: 'A high-performance C++ pricing engine for weather derivatives using Ornstein-Uhlenbeck stochastic processes, with a full React risk dashboard and Excel/VBA front-office add-in.',
     bullets: [
       'Parallelized Monte Carlo simulations in C++ pricing weather derivatives via O-U stochastic processes',
@@ -756,7 +767,7 @@ const PROJECTS = [
     tags: ['C++', 'Python', 'R', 'React', 'PostgreSQL', 'Monte Carlo', 'VBA'],
   },
   {
-    num: '02', title: 'QUANTCOLLAB', sub: 'Enterprise Risk Reporting Portal',
+    num: '03', title: 'QUANTCOLLAB', sub: 'Enterprise Risk Reporting Portal',
     date: 'Mar — Apr 2026', cat: 'fullstack', github: 'https://github.com/Git-Aarya',
     desc: 'An enterprise SharePoint + Azure platform for quantitative research collaboration — secured with Entra ID SSO and a C# microservice polling legacy market feeds.',
     bullets: [
@@ -767,7 +778,7 @@ const PROJECTS = [
     tags: ['React', 'TypeScript', 'C#', 'ASP.NET', 'Azure', 'SQL Server', 'OAuth'],
   },
   {
-    num: '03', title: 'AEROMETRIX', sub: 'Advanced Drone Telemetry Analyzer',
+    num: '04', title: 'AEROMETRIX', sub: 'Advanced Drone Telemetry Analyzer',
     date: 'Mar 2026', cat: 'fullstack', github: 'https://github.com/Git-Aarya/AeroMetrix',
     desc: 'A cross-platform desktop application ingesting, processing, and visualizing high-fidelity drone flight telemetry — bridging a Julia numerical engine, a C# ASP.NET Core API, and a React/Electron frontend.',
     bullets: [
@@ -779,7 +790,7 @@ const PROJECTS = [
     tags: ['Julia', 'C#', 'ASP.NET Core', 'React', 'TypeScript', 'Electron', 'SQLite'],
   },
   {
-    num: '04', title: 'STATGIT', sub: 'Statistical Data Version Control',
+    num: '05', title: 'STATGIT', sub: 'Statistical Data Version Control',
     date: 'Feb — Mar 2026', cat: 'mlops', github: 'https://github.com/Git-Aarya/statgit', live: 'https://statgit.com/',
     desc: 'Zero-ETL Python CLI treating datasets as version-controlled states — detecting multivariate drift, scanning PII, and triggering MLOps remediation automatically.',
     bullets: [
@@ -790,7 +801,7 @@ const PROJECTS = [
     tags: ['Python', 'Polars', 'AWS S3', 'SciPy', 'Snowflake', 'MLOps', 'CLI'],
   },
   {
-    num: '05', title: 'XAIQUANT', sub: 'Algorithmic Trading Backend',
+    num: '06', title: 'XAIQUANT', sub: 'Algorithmic Trading Backend',
     date: 'Jul — Aug 2025', cat: 'quant', github: 'https://github.com/Git-Aarya/XAIQUANT',
     desc: 'Low-latency FastAPI + PyTorch inference engine forecasting stock prices via LSTM with SHAP explainability on every prediction, containerized for Cloud Run.',
     bullets: [
@@ -801,7 +812,7 @@ const PROJECTS = [
     tags: ['PyTorch', 'FastAPI', 'SHAP', 'LSTM', 'Docker', 'React', 'GCP'],
   },
   {
-    num: '06', title: 'ALGORITHMVISUALIZER', sub: '30+ Algorithms, Animated',
+    num: '07', title: 'ALGORITHMVISUALIZER', sub: '30+ Algorithms, Animated',
     date: '2024', cat: 'web', github: 'https://github.com/Git-Aarya/AlgorithmVisualizer', live: 'https://git-aarya.github.io/AlgorithmVisualizer/',
     desc: 'Step-by-step animated visualization of 30+ algorithms — sorting, graph traversal, DP, backtracking — with live code display and zero build dependencies.',
     bullets: [
@@ -812,7 +823,7 @@ const PROJECTS = [
     tags: ['JavaScript', 'HTML', 'CSS', 'Tailwind'],
   },
   {
-    num: '07', title: 'VECTORPLAYGROUND', sub: '3D Vector Mathematics',
+    num: '08', title: 'VECTORPLAYGROUND', sub: '3D Vector Mathematics',
     date: '2024', cat: 'web', github: 'https://github.com/Git-Aarya/VectorPlayground', live: 'https://git-aarya.github.io/VectorPlayground/',
     desc: 'Interactive 3D vector operations with drag-to-edit arrowheads, dynamic dependency graphs, and live readout of magnitude, angle, and dot products.',
     bullets: [
@@ -942,11 +953,11 @@ function Experience() {
 /* ── SKILLS (typographic flow, no pill boxes) ── */
 const SKILL_CATS = [
   { title: 'Languages', items: ['C++', 'Python', 'R', 'Julia', 'TypeScript', 'JavaScript', 'Java', 'SQL', 'C#', 'Bash', 'VBA', 'PowerShell'] },
-  { title: 'ML & Data Science', items: ['PyTorch', 'TensorFlow', 'Keras', 'Scikit-learn', 'SHAP', 'NumPy', 'Pandas', 'Polars', 'SciPy', 'Apache Spark'] },
+  { title: 'ML & Data Science', items: ['PyTorch', 'TensorFlow', 'Keras', 'Scikit-learn', 'XGBoost', 'FinBERT', 'SHAP', 'LIME', 'NumPy', 'Pandas', 'Polars', 'SciPy', 'statsmodels', 'Apache Spark'] },
   { title: 'Infrastructure & Cloud', items: ['Docker', 'Kubernetes', 'Microsoft Azure', 'AWS S3', 'GCS', 'Snowflake', 'PostgreSQL', 'MS SQL Server', 'SQLite', 'Neo4j', 'Linux', 'CI/CD'] },
   { title: 'Web & Frameworks', items: ['React', 'Electron', 'FastAPI', 'ASP.NET Core', 'SharePoint SPFx', 'Three.js', 'TanStack Query', 'Recharts', 'jQuery', 'HTML/CSS'] },
-  { title: 'Quant & Finance', items: ['Black-Litterman', 'MOSEK', 'Monte Carlo', 'Ornstein-Uhlenbeck', 'Statistical Arbitrage', 'Options Pricing', 'Backtesting', 'SHAP / XAI'] },
-  { title: 'Tools', items: ['Git / GitHub', 'MS Excel', 'PowerShell', 'Microsoft Entra ID', 'BigQuery', 'SharePoint'] },
+  { title: 'Quant & Finance', items: ['Black-Litterman', 'MOSEK', 'cvxpy', 'Monte Carlo', 'Ornstein-Uhlenbeck', 'Statistical Arbitrage', 'Options Pricing', 'Backtesting', 'SHAP / XAI', 'Credit Distress Modelling'] },
+  { title: 'Tools', items: ['Git / GitHub', 'BeautifulSoup', 'MS Excel', 'PowerShell', 'Microsoft Entra ID', 'BigQuery', 'SharePoint'] },
 ];
 
 function Skills() {
