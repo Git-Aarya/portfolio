@@ -2,7 +2,7 @@
 
 Personal portfolio site built in HTML/CSS/React.
 
-**Live:** https://git-aarya.github.io
+**Live:** https://aarya.ch
 
 ## Stack
 - React (inline Babel, no build step)
