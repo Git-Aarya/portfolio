@@ -1,1050 +1,3758 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Aarya Chaurasia</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&amp;family=DM+Serif+Display:ital@0;1&amp;family=JetBrains+Mono:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
-<script type='text/javascript' nonce='uY1cpqojrTsvezabPR+RMA==' src='https://claude.ai/bsLVCE7d9qiDTFv8KrqyaiLVimRo_B-gzkIW00LDQQAWoXOaRU9xyZeL_KKbBMkAwI_x885ziV-_hLK4L7Rs_iyhmt7sgwFZtMMtzNQEtETbn976E8unrWDGXMx6MvAnJaB2oSqmDv5LPH5aLrPC_sf2HvgLT4jDZ-N1e3ZyW7Y3Bd1XrYZrkaXzw5K8SgwKTY--lOrwDxnZ7hp3P9BUiab0HsFRnbrh1cM7X20HhBaQYWh7Kl58-yYESmIGdvmjAlnlQTtSWeE9pSZw3j4yQAywTcXCybsW0-no82Q6A2XBzjtSM3ZX9COMg9yRHFpYH8PUpZFLc2QMDNDDxuUYwsyHEOEtbQEMVaSFXbm_D5IONjX7DYx9n3YcGMy6GJKk1C5uCIKEtANn86Px6AASVJmtA1rD5g4-p-pkymi6rPoMoUOeFMukEJj-8FZIN3CQp_hfcTwiVd77ICyUkRkkv7s3bxfWec-KnpaM7uWOtBFUutZIQNMoz4P8fIGY6BY_Zxc71S0Qu8PdFZkSP3A_uE-_w_5Va7XalbCfUtPEpa-GL7s'></script><script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-<style>
-:root {
-  --ink:     #0e0e12;
-  --paper:   #f0ede8;
-  --signal:  oklch(72% 0.21 185);
-  --signal-d: oklch(52% 0.17 185);
-  --signal-bg: oklch(72% 0.21 185 / 0.07);
-  --gold:    oklch(72% 0.14 80);
-  --gold-bg: oklch(72% 0.14 80 / 0.07);
-  --muted:   oklch(46% 0.004 240);
-  --dim:     oklch(30% 0.004 240);
-  --border:  oklch(20% 0.005 240);
-  --surf:    oklch(15% 0.005 240);
-  --surf2:   oklch(18% 0.005 240);
-  --fn-disp:  'Syne', sans-serif;
-  --fn-serif: 'DM Serif Display', Georgia, serif;
-  --fn-mono:  'JetBrains Mono', monospace;
-}
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body { background: var(--ink); color: var(--paper); font-family: var(--fn-disp); overflow-x: hidden; cursor: none; }
-::selection { background: var(--signal); color: var(--ink); }
-::-webkit-scrollbar { width: 2px; }
-::-webkit-scrollbar-track { background: var(--ink); }
-::-webkit-scrollbar-thumb { background: var(--signal); }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Aarya Chaurasia — Data Engineering, AI Systems & Quantitative Research</title>
+  <meta name="description"
+    content="Portfolio of Aarya Chaurasia — UBC Statistics & Computer Science. Incoming Data Engineer Co-op @ Ericsson, AI Automation Engineer Intern @ Mackenzie Investments, Quant Researcher @ UBCTG, Founder @ StatGit." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --ink: #0b0c10;
+      --paper: #f2efe9;
+      --signal: oklch(74% 0.19 185);
+      --signal-d: oklch(54% 0.16 185);
+      --signal-bg: oklch(74% 0.19 185 / 0.08);
+      --signal-bd: oklch(74% 0.19 185 / 0.35);
+      --gold: oklch(76% 0.14 80);
+      --gold-bg: oklch(76% 0.14 80 / 0.09);
+      --muted: oklch(62% 0.01 240);
+      --dim: oklch(44% 0.01 240);
+      --border: oklch(22% 0.008 240);
+      --surf: oklch(14% 0.006 240);
+      --surf2: oklch(18% 0.008 240);
+      --fn-disp: 'Syne', sans-serif;
+      --fn-serif: 'DM Serif Display', Georgia, serif;
+      --fn-mono: 'JetBrains Mono', monospace;
+      --nav-h: 74px;
+    }
 
-/* ── CURSOR ── */
-#c-dot {
-  position: fixed; top: 0; left: 0; z-index: 9999;
-  width: 6px; height: 6px; border-radius: 50%;
-  background: var(--signal); pointer-events: none;
-  transform: translate(-50%,-50%);
-  box-shadow: 0 0 16px var(--signal), 0 0 4px var(--signal);
-  transition: width .15s, height .15s, background .2s;
-}
-#c-ring {
-  position: fixed; top: 0; left: 0; z-index: 9998;
-  width: 32px; height: 32px; border-radius: 50%;
-  border: 1px solid oklch(72% 0.21 185 / 0.5);
-  pointer-events: none; transform: translate(-50%,-50%);
-  transition: width .25s cubic-bezier(.16,1,.3,1),
-              height .25s cubic-bezier(.16,1,.3,1),
-              border-color .2s; 
-}
-body.hov #c-dot  { width: 10px; height: 10px; background: var(--gold); box-shadow: 0 0 16px var(--gold); }
-body.hov #c-ring { width: 52px; height: 52px; border-color: oklch(72% 0.14 80 / 0.4); }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-/* ── NOISE ── */
-#noise { position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: .028; mix-blend-mode: screen; }
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
 
-/* ── NAV ── */
-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 500;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 28px 64px;
-  mix-blend-mode: difference;
-}
-.nav-logo {
-  font-family: var(--fn-mono); font-size: 11px; color: var(--paper);
-  letter-spacing: .14em; text-transform: uppercase; opacity: .55;
-}
-.nav-links { display: flex; gap: 40px; list-style: none; }
-.nav-links a {
-  font-family: var(--fn-mono); font-size: 10px; color: var(--paper);
-  text-decoration: none; letter-spacing: .16em; text-transform: uppercase;
-  opacity: .3; transition: opacity .3s;
-  position: relative;
-}
-.nav-links a::after {
-  content: ''; position: absolute; bottom: -3px; left: 0; right: 0; height: 1px;
-  background: var(--signal); transform: scaleX(0); transform-origin: left;
-  transition: transform .3s cubic-bezier(.16,1,.3,1);
-}
-.nav-links a:hover { opacity: 1; }
-.nav-links a:hover::after { transform: scaleX(1); }
+    body {
+      background: var(--ink);
+      color: var(--paper);
+      font-family: var(--fn-disp);
+      overflow-x: hidden;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
 
-/* ── HERO ── */
-#hero {
-  position: relative; z-index: 1;
-  min-height: 100vh; overflow: hidden;
-  display: flex; flex-direction: column; justify-content: flex-end;
-  padding: 0 0 72px;
-}
-.hero-canvas { position: absolute; inset: 0; pointer-events: none; }
-.hero-meta-top {
-  position: absolute; top: 0; left: 0; right: 0;
-  padding: 28px 64px 0;
-  display: flex; justify-content: space-between; align-items: flex-start;
-  z-index: 2;
-}
-.hero-badge {
-  display: inline-flex; align-items: center; gap: 8px;
-  font-family: var(--fn-mono); font-size: 10px; letter-spacing: .2em;
-  color: var(--signal); text-transform: uppercase;
-}
-.hero-badge::before {
-  content: ''; width: 5px; height: 5px; border-radius: 50%;
-  background: var(--signal); animation: blink 2.4s step-end infinite;
-  box-shadow: 0 0 8px var(--signal);
-}
-@keyframes blink { 50% { opacity: 0; } }
-.hero-loc { font-family: var(--fn-mono); font-size: 10px; letter-spacing: .1em; color: var(--muted); text-transform: uppercase; margin-top: 8px; }
-.hero-tr { text-align: right; }
-.hero-tr-line { font-family: var(--fn-mono); font-size: 10px; color: oklch(38% .004 240); letter-spacing: .1em; line-height: 2.2; }
+    /* Enable custom cursor only on fine-pointer (desktop) devices */
+    @media (hover: hover) and (pointer: fine) {
 
-/* The name */
-.hero-name {
-  position: relative; z-index: 2;
-  padding: 0 64px;
-  line-height: .9;
-  text-align: left;
-}
-.hero-line {
-  display: block;
-  font-family: var(--fn-disp);
-  font-weight: 800;
-  font-size: clamp(56px, 9vw, 130px);
-  letter-spacing: -.02em;
-}
-.hero-line-1 { color: var(--paper); }
-.hero-line-2 { color: transparent; -webkit-text-stroke: 1px oklch(40% .004 240); }
-.hero-line-2 .outline-signal { -webkit-text-stroke: 1px var(--signal); color: transparent; }
+      body,
+      a,
+      button,
+      [role="button"],
+      input,
+      select {
+        cursor: none;
+      }
+    }
 
-.hero-bottom {
-  position: relative; z-index: 2;
-  padding: 0 64px;
-  display: flex; align-items: flex-end; justify-content: space-between;
-  margin-top: 40px;
-  flex-wrap: wrap; gap: 20px;
-}
-.hero-desc {
-  font-family: var(--fn-serif); font-style: italic;
-  font-size: clamp(15px, 1.6vw, 21px); color: oklch(48% .004 240);
-  max-width: 460px; line-height: 1.65;
-  border-left: 2px solid var(--border); padding-left: 20px;
-}
-.hero-desc em { font-style: normal; color: var(--paper); }
-.hero-scroll {
-  font-family: var(--fn-mono); font-size: 9px; letter-spacing: .22em;
-  color: var(--dim); text-transform: uppercase;
-  display: flex; flex-direction: column; align-items: center; gap: 10px;
-  animation: scrollPulse 3s ease-in-out infinite;
-}
-.hero-scroll::after {
-  content: ''; width: 1px; height: 40px; background: linear-gradient(to bottom, var(--signal), transparent);
-}
-@keyframes scrollPulse { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+    @media (hover: none),
+    (pointer: coarse) {
 
-/* ── MARQUEE ── */
-.marquee-strip {
-  position: relative; z-index: 1;
-  overflow: hidden; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
-  padding: 18px 0; background: var(--surf);
-}
-.marquee-inner {
-  display: flex; gap: 0; white-space: nowrap;
-  animation: marquee 28s linear infinite;
-}
-.marquee-inner:hover { animation-play-state: paused; }
-.marquee-item {
-  flex-shrink: 0; display: flex; align-items: center; gap: 40px;
-  padding: 0 40px; font-family: var(--fn-mono); font-size: 10px;
-  letter-spacing: .18em; text-transform: uppercase; color: var(--dim);
-}
-.marquee-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--signal); flex-shrink: 0; }
-@keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+      #c-dot,
+      #c-ring {
+        display: none !important;
+      }
+    }
 
-/* ── SHARED ── */
-section { position: relative; z-index: 1; overflow: hidden; scroll-margin-top: 80px; }
-.wrap { max-width: 1080px; margin: 0 auto; padding: 0 64px; }
-.sec-label {
-  font-family: var(--fn-mono); font-size: 9px; letter-spacing: .28em;
-  color: var(--signal); text-transform: uppercase; display: block; margin-bottom: 14px;
-}
-.sec-title {
-  font-family: var(--fn-disp); font-weight: 800;
-  font-size: clamp(44px, 5.5vw, 84px); color: var(--paper);
-  letter-spacing: -.02em; line-height: .92;
-}
-/* Ghost section numbers */
-.ghost-num {
-  position: absolute; right: 48px; top: 80px;
-  font-family: var(--fn-disp); font-weight: 800;
-  font-size: clamp(100px, 14vw, 180px);
-  color: oklch(100% 0 0 / 0.025); line-height: 1;
-  pointer-events: none; user-select: none; letter-spacing: -.04em;
-  z-index: 0;
-}
+    ::selection {
+      background: var(--signal);
+      color: var(--ink);
+    }
 
-/* Fade in */
-.fi { opacity: 0; transform: translateY(24px); transition: opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1); }
-.fi.vis { opacity: 1; transform: none; }
+    ::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+    }
 
-/* ── ABOUT ── */
-#about { padding: 140px 0 120px; border-top: 1px solid var(--border); }
-.about-pullquote {
-  font-family: var(--fn-serif); font-style: italic;
-  font-size: clamp(22px, 2.6vw, 36px); color: var(--paper);
-  line-height: 1.35; margin: 72px 0;
-  padding: 0 0 0 36px; border-left: 2px solid var(--signal);
-  max-width: 700px;
-}
-.about-pullquote em { font-style: normal; color: var(--signal); }
-.about-grid { display: grid; grid-template-columns: 1fr 340px; gap: 80px; align-items: start; }
-.about-text { font-size: 16px; line-height: 1.9; color: oklch(56% .004 240); max-width: 560px; }
-.about-text p + p { margin-top: 22px; }
-.about-text strong { color: var(--paper); font-weight: 600; }
-/* Stats: oversized */
-.stat-list { display: flex; flex-direction: column; }
-.stat-row {
-  display: grid; grid-template-columns: 1fr auto; align-items: baseline;
-  padding: 22px 0; border-bottom: 1px solid var(--border);
-  gap: 12px;
-}
-.stat-row:first-child { border-top: 1px solid var(--border); }
-.stat-n { font-family: var(--fn-disp); font-weight: 800; font-size: 68px; line-height: 1; color: var(--paper); }
-.stat-n sup { font-size: 28px; color: var(--signal); vertical-align: super; }
-.stat-l { font-family: var(--fn-mono); font-size: 10px; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; text-align: right; max-width: 130px; }
-/* Currently widget */
-.currently {
-  margin-top: 28px; padding: 28px 28px 20px;
-  border: 1px solid var(--border); background: var(--surf);
-  position: relative; overflow: hidden;
-}
-.currently::before {
-  content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%;
-  background: var(--signal);
-}
-.curr-label { font-family: var(--fn-mono); font-size: 9px; letter-spacing: .25em; color: var(--signal); text-transform: uppercase; margin-bottom: 22px; display: flex; align-items: center; gap: 8px; }
-.curr-label::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--signal); animation: blink 2.4s step-end infinite; box-shadow: 0 0 6px var(--signal); }
-.curr-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-top: 1px solid oklch(20% .005 240 / 0.6); }
-.curr-k { font-family: var(--fn-mono); font-size: 10px; color: var(--dim); letter-spacing: .08em; text-transform: uppercase; }
-.curr-v { font-family: var(--fn-disp); font-size: 13px; color: var(--paper); font-weight: 600; text-align: right; }
+    ::-webkit-scrollbar-track {
+      background: var(--ink);
+    }
 
-/* ── WORK ── */
-#work { padding: 140px 0; border-top: 1px solid var(--border); }
-.work-head { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 72px; flex-wrap: wrap; gap: 24px; }
-.work-filters { display: flex; gap: 6px; flex-wrap: wrap; }
-.wf {
-  font-family: var(--fn-mono); font-size: 9px; letter-spacing: .14em; text-transform: uppercase;
-  padding: 8px 20px; background: transparent; color: var(--muted);
-  border: 1px solid var(--border); cursor: none; transition: all .2s;
-}
-.wf.on { color: var(--signal); border-color: var(--signal); background: var(--signal-bg); }
-.wf:hover:not(.on) { color: var(--paper); border-color: oklch(32% .005 240); }
+    ::-webkit-scrollbar-thumb {
+      background: var(--signal);
+      border-radius: 2px;
+    }
 
-/* Project row */
-.project-row {
-  display: grid; grid-template-columns: 60px 1fr 200px;
-  border-top: 1px solid var(--border);
-  cursor: none; transition: background .35s; position: relative; overflow: hidden;
-}
-.project-row:last-child { border-bottom: 1px solid var(--border); }
-.project-row:hover { background: var(--surf); }
-/* Left accent */
-.project-row::after {
-  content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px;
-  background: var(--signal); transform: scaleY(0); transform-origin: bottom;
-  transition: transform .5s cubic-bezier(.16,1,.3,1);
-}
-.project-row:hover::after { transform: scaleY(1); }
-/* Ghost project number */
-.proj-ghost {
-  position: absolute; right: 220px; top: 50%; transform: translateY(-50%);
-  font-family: var(--fn-disp); font-weight: 800;
-  font-size: clamp(80px, 12vw, 160px);
-  color: oklch(100% 0 0 / 0.03); line-height: 1;
-  pointer-events: none; user-select: none; transition: opacity .4s;
-}
-.project-row:hover .proj-ghost { color: oklch(100% 0 0 / 0.06); }
+    /* ── CUSTOM CURSOR ── */
+    #c-dot {
+      position: fixed;
+      top: -20px;
+      left: -20px;
+      z-index: 10000;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--signal);
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 0 16px var(--signal), 0 0 4px var(--signal);
+      transition: width .15s, height .15s, background .2s;
+    }
 
-.proj-idx { font-family: var(--fn-mono); font-size: 10px; color: var(--dim); padding: 44px 0; letter-spacing: .1em; align-self: start; padding-left: 2px; }
-.proj-main { padding: 44px 48px; border-left: 1px solid var(--border); border-right: 1px solid var(--border); }
-.proj-title {
-  font-family: var(--fn-disp); font-weight: 800;
-  font-size: clamp(26px, 2.8vw, 42px); color: var(--paper);
-  letter-spacing: -.01em; line-height: .95; margin-bottom: 8px;
-  transition: color .3s; text-wrap: pretty;
-}
-.project-row:hover .proj-title { color: var(--signal); }
-.proj-sub { font-size: 11px; color: var(--muted); font-family: var(--fn-mono); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 16px; }
-.proj-desc { font-size: 14px; color: oklch(48% .004 240); line-height: 1.75; max-width: 440px; }
-.proj-expand { overflow: hidden; max-height: 0; transition: max-height .55s cubic-bezier(.16,1,.3,1); }
-.project-row.open .proj-expand { max-height: 500px; }
-.proj-bullets { list-style: none; margin-top: 22px; display: flex; flex-direction: column; gap: 10px; }
-.proj-bullets li { font-size: 13px; color: oklch(50% .004 240); padding-left: 20px; position: relative; line-height: 1.65; }
-.proj-bullets li::before { content: '→'; position: absolute; left: 0; color: var(--signal); }
-.proj-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 18px; }
-.proj-tag {
-  font-family: var(--fn-mono); font-size: 9px; letter-spacing: .1em; text-transform: uppercase;
-  color: oklch(48% .004 240); border: 1px solid oklch(26% .005 240); padding: 3px 9px;
-}
-.proj-side {
-  padding: 36px 28px; display: flex; flex-direction: column;
-  justify-content: space-between; align-items: flex-end;
-}
-.proj-date { font-family: var(--fn-mono); font-size: 10px; color: oklch(36% .004 240); letter-spacing: .08em; text-align: right; }
-.proj-links { display: flex; flex-direction: column; gap: 6px; align-items: flex-end; margin-top: 12px; }
-.proj-link {
-  font-family: var(--fn-mono); font-size: 9px; letter-spacing: .12em; text-transform: uppercase;
-  color: var(--dim); text-decoration: none; border: 1px solid var(--border); padding: 4px 10px;
-  transition: all .2s;
-}
-.proj-link:hover { color: var(--signal); border-color: var(--signal); }
-.proj-toggle {
-  font-family: var(--fn-mono); font-size: 9px; letter-spacing: .12em; text-transform: uppercase;
-  color: var(--dim); margin-top: auto; display: flex; align-items: center; gap: 6px;
-  transition: color .25s;
-}
-.project-row:hover .proj-toggle { color: oklch(60% .004 240); }
-.proj-chevron { transition: transform .4s cubic-bezier(.16,1,.3,1); display: inline-block; font-size: 11px; }
-.project-row.open .proj-chevron { transform: rotate(180deg); }
+    #c-ring {
+      position: fixed;
+      top: -40px;
+      left: -40px;
+      z-index: 9999;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 1px solid oklch(74% 0.19 185 / 0.45);
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      transition: width .25s cubic-bezier(.16, 1, .3, 1),
+        height .25s cubic-bezier(.16, 1, .3, 1),
+        border-color .2s;
+    }
 
-/* ── EXPERIENCE ── */
-#experience { padding: 140px 0; border-top: 1px solid var(--border); }
-.exp-list { margin-top: 80px; }
-.exp-item {
-  display: grid; grid-template-columns: 180px 1fr;
-  gap: 0; padding: 72px 0; border-top: 1px solid var(--border);
-  position: relative;
-}
-.exp-item:last-child { border-bottom: 1px solid var(--border); }
-.exp-left { padding-right: 64px; }
-.exp-period { font-family: var(--fn-mono); font-size: 10px; letter-spacing: .14em; color: var(--signal); text-transform: uppercase; margin-bottom: 8px; }
-.exp-org { font-family: var(--fn-mono); font-size: 11px; color: var(--dim); letter-spacing: .06em; line-height: 1.8; }
-.exp-right {}
-.exp-role { font-family: var(--fn-disp); font-weight: 800; font-size: clamp(22px, 2.4vw, 34px); color: var(--paper); letter-spacing: -.01em; line-height: .95; margin-bottom: 24px; }
-.exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 16px; max-width: 580px; }
-.exp-bullets li { font-size: 14px; color: oklch(50% .004 240); padding-left: 24px; position: relative; line-height: 1.8; }
-.exp-bullets li::before { content: '—'; position: absolute; left: 0; color: var(--dim); }
-.exp-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 24px; }
-.exp-tag { font-family: var(--fn-mono); font-size: 9px; letter-spacing: .1em; text-transform: uppercase; color: oklch(48% .004 240); border: 1px solid oklch(26% .005 240); padding: 3px 9px; }
+    body.hov #c-dot {
+      width: 11px;
+      height: 11px;
+      background: var(--gold);
+      box-shadow: 0 0 18px var(--gold);
+    }
 
-/* ── SKILLS ── */
-#skills { padding: 140px 0; border-top: 1px solid var(--border); background: var(--surf); }
-.skills-intro { margin-top: 72px; margin-bottom: 80px; }
-.skills-body { display: flex; flex-direction: column; gap: 0; }
-.skill-cat {
-  display: grid; grid-template-columns: 220px 1fr;
-  gap: 0; padding: 32px 0; border-top: 1px solid var(--border);
-  align-items: baseline;
-}
-.skill-cat:last-child { border-bottom: 1px solid var(--border); }
-.sk-title { font-family: var(--fn-mono); font-size: 9px; letter-spacing: .24em; color: var(--signal); text-transform: uppercase; padding-right: 40px; padding-top: 3px; }
-.sk-flow {
-  font-family: var(--fn-disp); font-size: 14px; font-weight: 600;
-  color: oklch(62% .004 240); line-height: 1.9;
-  letter-spacing: .01em; max-width: 640px;
-}
-.sk-flow .sk-word {
-  color: var(--paper); display: inline;
-  transition: color .2s; cursor: default;
-}
-.sk-flow .sk-word:hover { color: var(--signal); }
-.sk-flow .sk-sep { color: var(--dim); margin: 0 4px; }
+    body.hov #c-ring {
+      width: 54px;
+      height: 54px;
+      border-color: oklch(76% 0.14 80 / 0.5);
+    }
 
-/* ── CONTACT ── */
-#contact { padding: 160px 0; border-top: 1px solid var(--border); overflow: hidden; }
-.contact-big {
-  font-family: var(--fn-disp); font-weight: 800;
-  font-size: clamp(36px, 5.5vw, 80px); color: var(--paper);
-  letter-spacing: -.025em; line-height: .92;
-  margin-bottom: 72px; max-width: 820px;
-}
-.contact-big em { font-style: italic; font-family: var(--fn-serif); font-weight: 400; color: var(--signal); }
-.contact-grid { display: grid; grid-template-columns: 1fr 360px; gap: 80px; align-items: start; }
-.contact-sub {
-  font-family: var(--fn-serif); font-style: italic;
-  font-size: clamp(15px, 1.6vw, 20px); color: oklch(48% .004 240); line-height: 1.7; max-width: 420px;
-}
-.contact-sub em { font-style: normal; color: var(--paper); }
-.contact-links { display: flex; flex-direction: column; gap: 0; }
-.c-link {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 28px 0; border-bottom: 1px solid var(--border);
-  text-decoration: none; color: var(--paper); transition: all .3s;
-  position: relative; cursor: none;
-}
-.c-link:first-child { border-top: 1px solid var(--border); }
-.c-link:hover { padding-left: 18px; }
-.c-inner { display: flex; flex-direction: column; gap: 4px; }
-.c-type { font-family: var(--fn-mono); font-size: 9px; color: var(--dim); letter-spacing: .22em; text-transform: uppercase; }
-.c-val { font-family: var(--fn-disp); font-weight: 700; font-size: 22px; letter-spacing: -.01em; transition: color .3s; }
-.c-link:hover .c-val { color: var(--signal); }
-.c-arr { font-size: 18px; color: var(--dim); transition: all .3s; }
-.c-link:hover .c-arr { color: var(--signal); transform: translate(4px,-4px); }
+    /* ── NOISE OVERLAY ── */
+    #noise {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      opacity: .024;
+      mix-blend-mode: screen;
+    }
 
-/* ── FOOTER ── */
-footer {
-  border-top: 1px solid var(--border); padding: 28px 64px;
-  display: flex; justify-content: space-between; align-items: center;
-  position: relative; z-index: 1;
-}
-.foot-l { font-family: var(--fn-mono); font-size: 9px; color: oklch(28% .004 240); letter-spacing: .14em; text-transform: uppercase; }
-.foot-r { font-family: var(--fn-mono); font-size: 9px; color: var(--dim); letter-spacing: .1em; }
+    /* ── NAVIGATION ── */
+    .site-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 600;
+      height: var(--nav-h);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 clamp(20px, 5vw, 64px);
+      background: oklch(11% 0.006 240 / 0.82);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid oklch(100% 0 0 / 0.07);
+      transition: background .3s, border-color .3s;
+    }
 
-/* ── TWEAKS ── */
-#tweaks-panel {
-  position: fixed; bottom: 24px; right: 24px; z-index: 9999;
-  background: var(--surf2); border: 1px solid var(--border);
-  padding: 24px; width: 260px; display: none;
-  box-shadow: 0 0 0 1px var(--border), 0 32px 80px oklch(0% 0 0 / .85);
-}
-#tweaks-panel.on { display: block; }
-.twk-h { font-family: var(--fn-mono); font-size: 9px; color: var(--signal); letter-spacing: .22em; text-transform: uppercase; margin-bottom: 22px; display: flex; justify-content: space-between; }
-.twk-close { color: var(--dim); cursor: none; transition: color .2s; }
-.twk-close:hover { color: var(--paper); }
-.twk-row { margin-bottom: 18px; }
-.twk-lbl { font-family: var(--fn-mono); font-size: 9px; color: var(--muted); display: block; margin-bottom: 8px; letter-spacing: .14em; text-transform: uppercase; }
-.twk-row select, .twk-row input[type=range] {
-  width: 100%; background: var(--surf); border: 1px solid var(--border);
-  color: oklch(55% .004 240); font-family: var(--fn-mono); font-size: 10px; padding: 8px; cursor: none;
-}
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--paper);
+    }
 
-@media (max-width: 900px) {
-  nav { padding: 20px 24px; }
-  #hero, .hero-meta-top, .hero-name, .hero-bottom { padding-left: 24px; padding-right: 24px; }
-  .wrap { padding: 0 24px; }
-  .ghost-num { right: 16px; font-size: 80px; }
-  .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 48px; }
-  .project-row { grid-template-columns: 1fr; }
-  .proj-idx { display: none; }
-  .proj-main { border: none; padding: 24px 0; }
-  .proj-side { padding: 0 0 24px; flex-direction: row; justify-content: space-between; align-items: center; }
-  .proj-ghost { display: none; }
-  .exp-item { grid-template-columns: 1fr; gap: 20px; }
-  .skill-cat { grid-template-columns: 1fr; gap: 10px; }
-  footer { flex-direction: column; gap: 8px; padding: 24px; text-align: center; }
-  .contact-big { font-size: clamp(32px, 8vw, 64px); }
-}
-</style>
+    .nav-monogram {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      border: 1px solid var(--signal-bd);
+      background: var(--signal-bg);
+      display: grid;
+      place-items: center;
+      font-family: var(--fn-mono);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--signal);
+      letter-spacing: .08em;
+    }
+
+    .nav-name {
+      font-family: var(--fn-mono);
+      font-size: 11px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--paper);
+      opacity: .9;
+    }
+
+    .nav-center {
+      display: flex;
+      align-items: center;
+      gap: clamp(18px, 2.5vw, 36px);
+      list-style: none;
+    }
+
+    .nav-center a {
+      font-family: var(--fn-mono);
+      font-size: 10px;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      transition: color .25s;
+      position: relative;
+      padding: 6px 0;
+    }
+
+    .nav-center a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: var(--signal);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .3s cubic-bezier(.16, 1, .3, 1);
+    }
+
+    .nav-center a:hover,
+    .nav-center a.active {
+      color: var(--paper);
+    }
+
+    .nav-center a:hover::after,
+    .nav-center a.active::after {
+      transform: scaleX(1);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .cmd-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--fn-mono);
+      font-size: 10px;
+      letter-spacing: .1em;
+      color: var(--muted);
+      background: var(--surf);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 7px 11px;
+      transition: all .2s;
+    }
+
+    .cmd-btn:hover {
+      color: var(--paper);
+      border-color: var(--signal-bd);
+      background: var(--surf2);
+    }
+
+    .cmd-kbd {
+      font-size: 9px;
+      padding: 1px 5px;
+      border-radius: 3px;
+      background: oklch(100% 0 0 / 0.06);
+      color: var(--signal);
+      border: 1px solid oklch(100% 0 0 / 0.1);
+    }
+
+    .resume-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-family: var(--fn-mono);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--ink);
+      background: var(--signal);
+      border: 1px solid var(--signal);
+      border-radius: 6px;
+      padding: 8px 14px;
+      transition: all .2s;
+    }
+
+    .resume-nav-btn:hover {
+      filter: brightness(1.1);
+      box-shadow: 0 0 20px oklch(74% 0.19 185 / 0.4);
+      transform: translateY(-1px);
+    }
+
+    .mob-menu-btn {
+      display: none;
+      width: 38px;
+      height: 38px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: var(--surf);
+      color: var(--paper);
+      align-items: center;
+      justify-content: center;
+      font-family: var(--fn-mono);
+      font-size: 15px;
+    }
+
+    /* Mobile Drawer */
+    .mob-drawer {
+      position: fixed;
+      top: var(--nav-h);
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 590;
+      background: oklch(10% 0.006 240 / 0.97);
+      backdrop-filter: blur(20px);
+      padding: 32px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transform: translateY(-105%);
+      transition: transform .35s cubic-bezier(.16, 1, .3, 1);
+      pointer-events: none;
+    }
+
+    .mob-drawer.open {
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .mob-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .mob-links a {
+      font-family: var(--fn-disp);
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--paper);
+      text-decoration: none;
+      letter-spacing: -.01em;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .mob-links a span {
+      font-family: var(--fn-mono);
+      font-size: 11px;
+      color: var(--signal);
+      letter-spacing: .18em;
+      font-weight: 400;
+    }
+
+    /* ── HERO SECTION ── */
+    #hero {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      padding: calc(var(--nav-h) + 36px) clamp(20px, 5vw, 64px) 56px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+
+    .hero-canvas {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero-top-bar {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 16px;
+      max-width: 1240px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: var(--signal-bg);
+      border: 1px solid var(--signal-bd);
+      font-family: var(--fn-mono);
+      font-size: clamp(9px, 1.1vw, 11px);
+      letter-spacing: .12em;
+      color: var(--signal);
+      text-transform: uppercase;
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--signal);
+      box-shadow: 0 0 10px var(--signal);
+      animation: pulseDot 2.2s ease-in-out infinite;
+      flex-shrink: 0;
+    }
+
+    @keyframes pulseDot {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: .35;
+        transform: scale(.85);
+      }
+    }
+
+    .hero-top-right {
+      font-family: var(--fn-mono);
+      font-size: 10px;
+      letter-spacing: .14em;
+      color: var(--muted);
+      text-transform: uppercase;
+      text-align: right;
+      line-height: 1.8;
+    }
+
+    .hero-main {
+      position: relative;
+      z-index: 2;
+      max-width: 1240px;
+      width: 100%;
+      margin: auto;
+      padding: clamp(32px, 6vh, 72px) 0;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--fn-mono);
+      font-size: clamp(10px, 1.2vw, 12px);
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .hero-name-wrap {
+      line-height: .9;
+    }
+
+    .hero-line {
+      display: block;
+      font-family: var(--fn-disp);
+      font-weight: 800;
+      font-size: clamp(46px, 9.2vw, 134px);
+      letter-spacing: -.025em;
+    }
+
+    .hero-line-1 {
+      color: var(--paper);
+    }
+
+    .hero-line-2 {
+      color: transparent;
+      -webkit-text-stroke: 1.5px oklch(48% .01 240);
+    }
+
+    .hero-line-2 .outline-signal {
+      -webkit-text-stroke: 1.5px var(--signal);
+      color: oklch(74% 0.19 185 / 0.08);
+    }
+
+    .hero-role-tags {
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .role-chip {
+      font-family: var(--fn-mono);
+      font-size: clamp(10px, 1.1vw, 11px);
+      letter-spacing: .1em;
+      color: var(--paper);
+      background: var(--surf2);
+      border: 1px solid var(--border);
+      padding: 6px 12px;
+      border-radius: 5px;
+    }
+
+    .role-chip strong {
+      color: var(--signal);
+      font-weight: 600;
+    }
+
+    .hero-bottom {
+      position: relative;
+      z-index: 2;
+      max-width: 1240px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 28px;
+      padding-top: 24px;
+      border-top: 1px solid oklch(100% 0 0 / 0.08);
+    }
+
+    .hero-desc {
+      font-family: var(--fn-serif);
+      font-style: italic;
+      font-size: clamp(17px, 1.8vw, 22px);
+      color: var(--muted);
+      max-width: 560px;
+      line-height: 1.55;
+      border-left: 2px solid var(--signal);
+      padding-left: 20px;
+    }
+
+    .hero-desc em {
+      font-style: normal;
+      color: var(--paper);
+    }
+
+    .hero-cta-cluster {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 14px;
+    }
+
+    .hero-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--fn-mono);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      padding: 12px 20px;
+      border-radius: 6px;
+      background: var(--signal);
+      color: var(--ink);
+      text-decoration: none;
+      border: 1px solid var(--signal);
+      transition: all .22s;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px oklch(74% 0.19 185 / 0.35);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--fn-mono);
+      font-size: 11px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      padding: 12px 18px;
+      border-radius: 6px;
+      background: var(--surf);
+      color: var(--paper);
+      text-decoration: none;
+      border: 1px solid var(--border);
+      transition: all .22s;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--signal);
+      color: var(--signal);
+      background: var(--signal-bg);
+    }
+
+    .quick-socials {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .social-pill {
+      font-family: var(--fn-mono);
+      font-size: 10px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 5px 12px;
+      transition: all .2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .social-pill:hover {
+      color: var(--paper);
+      border-color: var(--signal-bd);
+      background: var(--surf2);
+    }
+
+    /* ── IMPACT METRICS STRIP ── */
+    .metrics-strip {
+      position: relative;
+      z-index: 2;
+      background: var(--surf);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .metrics-grid {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    .metric-cell {
+      padding: 28px 24px;
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 8px;
+      transition: background .25s;
+    }
+
+    .metric-cell:last-child {
+      border-right: none;
+    }
+
+    .metric-cell:hover {
+      background: var(--surf2);
+    }
+
+    .metric-val {
+      font-family: var(--fn-disp);
+      font-weight: 800;
+      font-size: clamp(24px, 2.4vw, 34px);
+      color: var(--paper);
+      letter-spacing: -.02em;
+      line-height: 1.05;
+    }
+
+    .metric-val span {
+      color: var(--signal);
+    }
+
+    .metric-lbl {
+      font-family: var(--fn-mono);
+      font-size: 10px;
+      color: var(--muted);
+      letter-spacing: .06em;
+      line-height: 1.5;
+    }
+
+    .metric-tag {
+      font-family: var(--fn-mono);
+      font-size: 9px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 4px;
+    }
+
+    /* ── MARQUEE ── */
+    .marquee-strip {
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+      padding: 14px 0;
+      background: oklch(12% 0.005 240);
+    }
+
+    .marquee-inner {
+      display: flex;
+      white-space: nowrap;
+      animation: marquee 34s linear infinite;
+    }
+
+    .marquee-inner:hover {
+      animation-play-state: paused;
+    }
+
+    .marquee-item {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      padding: 0 32px;
+      font-family: var(--fn-mono);
+      font-size: 10px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--dim);
+    }
+
+    .marquee-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--signal);
+      flex-shrink: 0;
+    }
+
+    @keyframes marquee {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* ── SHARED SECTION STYLES ── */
+    section {
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      scroll-margin-top: var(--nav-h);
+    }
+
+    .wrap {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 clamp(20px, 5vw, 64px);
+    }
+
+    .sec-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-bottom: 64px;
+    }
+
+    .sec-label {
+      font-family: var(--fn-mono);
+      font-size: 10px;
+      letter-spacing: .26em;
+      color: var(--signal);
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .sec-title {
+      font-family: var(--fn-disp);
+      font-weight: 800;
+      font-size: clamp(36px, 5vw, 72px);
+      color: var(--paper);
+      letter-spacing: -.025em;
+      line-height: .95;
+    }
+
+    .ghost-num {
+      position: absolute;
+      right: clamp(16px, 4vw, 48px);
+      top: 64px;
+      font-family: var(--fn-disp);
+      font-weight: 800;
+      font-size: clamp(90px, 13vw, 170px);
+      color: oklch(100% 0 0 / 0.025);
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+      letter-spacing: -.04em;
+      z-index: 0;
+    }
+
+    /* Fade-in animation */
+    .fi {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .75s cubic-bezier(.16, 1, .3, 1), transform .75s cubic-bezier(.16, 1, .3, 1);
+    }
+
+    .fi.vis {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* Active skill filter banner */
+    .skill-filter-banner {
+      margin-bottom: 32px;
+      padding: 12px 18px;
+      background: var(--signal-bg);
+      border: 1px solid var(--signal-bd);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-family: var(--fn-mono);
+      font-size: 11px;
+      color: var(--paper);
+    }
+
+    .skill-filter-banner button {
+      font-family: var(--fn-mono);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      padding: 5px 10px;
+      border-radius: 4px;
+      background: var(--ink);
+      color: var(--signal);
+      border: 1px solid var(--signal-bd);
+    }
+
+    /* ── 01: EXPERIENCE SECTION ── */
+    #experience {
+      padding: clamp(80px, 10vw, 130px) 0;
+    }
+
+    .exp-timeline {
+      display: flex;
+      flex-direction: column;
+      border-top: 1px solid var(--border);
+    }
+
+    .exp-card {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 48px;
+      padding: clamp(36px, 5vw, 56px) 24px;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      transition: background .3s;
+    }
+
+    .exp-card:hover {
+      background: oklch(15% 0.006 240 / 0.65);
+    }
+
+    .exp-card.highlighted {
+      background: var(--signal-bg);
+      border-left: 3px solid var(--signal);
+    }
+
+    .exp-card::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--signal);
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: transform .4s cubic-bezier(.16, 1, .3, 1);
+    }
+
+    .exp-card:hover::before {
+      transform: scaleY(1);
+    }
+
+    .exp-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .exp-period {
+      font-family: var(--fn-mono);
+      font-size: 10px;
+      letter-spacing: .14em;
+      color: var(--signal);
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .exp-badge {
+      display: inline-block;
+      width: fit-content;
+      font-family: var(--fn-mono);
+      font-size: 9px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: var(--gold-bg);
+      color: var(--gold);
+      border: 1px solid oklch(76% 0.14 80 / 0.3);
+      margin-top: 2px;
+    }
+
+    .exp-company {
+      font-family: var(--fn-disp);
+      font-weight: 800;
+      font-size: 22px;
+      color: var(--paper);
+      letter-spacing: -.01em;
+      margin-top: 4px;
+    }
+
+    .exp-loc {
+      font-family: var(--fn-mono);
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: .06em;
+    }
+
+    .exp-ext-links {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+
+    .exp-ext-link {
+      font-family: var(--fn-mono);
+      font-size: 9px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--paper);
+      text-decoration: none;
+      border: 1px solid var(--border);
+      padding: 5px 10px;
+      border-radius: 4px;
+      background: var(--surf2);
+      transition: all .2s;
+    }
+
+    .exp-ext-link:hover {
+      border-color: var(--signal);
+      color: var(--signal);
+    }
+
+    .exp-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .exp-role-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .exp-role {
+      font-family: var(--fn-disp);
+      font-weight: 700;
+      font-size: clamp(20px, 2.2vw, 28px);
+      color: var(--paper);
+      letter-spacing: -.01em;
+      line-height: 1.15;
+    }
+
+    .exp-impact-pill {
+      font-family: var(--fn-mono);
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--signal);
+      background: var(--signal-bg);
+      border: 1px solid var(--signal-bd);
+      padding: 5px 12px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+
+    .exp-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 760px;
+    }
+
+    .exp-bullets li {
+      font-size: 14.5px;
+      color: oklch(72% .006 240);
+      padding-left: 22px;
+      position: relative;
+      line-height: 1.7;
+    }
+
+    .exp-bullets li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--signal);
+      font-family: var(--fn-mono);
+      font-size: 12px;
+    }
+
+    .exp-bullets li strong {
+      color: var(--paper);
+      font-weight: 600;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 22px;
+    }
+
+    .tech-tag {
+      font-family: var(--fn-mono);
+      font-size: 9.5px;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border: 1px solid var(--border);
+      background: var(--surf);
+      padding: 4px 10px;
+      border-radius: 4px;
+      transition: all .2s;
+    }
+
+    .tech-tag:hover,
+    .tech-tag.active {
+      color: var(--signal);
+      border-color: var(--signal);
+      background: var(--signal-bg);
+    }
+
+    /* ── 02: WORK / PROJECTS SECTION ── */
+    #work {
+      padding: clamp(80px, 10vw, 130px) 0;
+      border-top: 1px solid var(--border);
+      background: oklch(12% 0.005 240 / 0.5);
+    }
+
+    .work-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+
+    .work-filters {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .wf {
+      font-family: var(--fn-mono);
+      font-size: 10px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: 9px 16px;
+      border-radius: 6px;
+      background: var(--surf);
+      color: var(--muted);
+      border: 1px solid var(--border);
+      transition: all .2s;
+    }
+
+    .wf.on {
+      color: var(--ink);
+      background: var(--signal);
+      border-color: var(--signal);
+      font-weight: 600;
+    }
+
+    .wf:hover:not(.on) {
+      color: var(--paper);
+      border-color: var(--signal-bd);
+    }
+
+    .work-search-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .work-search {
+      font-family: var(--fn-mono);
+      font-size: 11px;
+      color: var(--paper);
+      background: var(--surf);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 9px 14px;
+      min-width: 220px;
+      outline: none;
+      transition: border-color .2s;
+    }
+
+    .work-search:focus {
+      border-color: var(--signal);
+    }
+
+    .expand-all-btn {
+      font-family: var(--fn-mono);
+      font-size: 10px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: 9px 14px;
+      border-radius: 6px;
+      background: var(--surf);
+      color: var(--muted);
+      border: 1px solid var(--border);
+      transition: all .2s;
+    }
+
+    .expand-all-btn:hover {
+      color: var(--paper);
+      border-color: var(--signal-bd);
+    }
+
+    .project-list {
+      border-top: 1px solid var(--border);
+    }
+
+    .project-row {
+      display: grid;
+      grid-template-columns: 64px 1fr 230px;
+      border-bottom: 1px solid var(--border);
+      transition: background .3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-row:hover {
+      background: var(--surf);
+    }
+
+    .project-row.highlighted {
+      background: var(--signal-bg);
+      border-left: 3px solid var(--signal);
+    }
+
+    .project-row::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--signal);
+      transform: scaleY(0);
+      transform-origin: bottom;
+      transition: transform .45s cubic-bezier(.16, 1, .3, 1);
+    }
+
+    .project-row:hover::after {
+      transform: scaleY(1);
+    }
+
+    .proj-idx {
+      font-family: var(--fn-mono);
+      font-size: 11px;
+      color: var(--dim);
+      padding: 36px 0 36px 12px;
+      letter-spacing: .1em;
+    }
+
+    .proj-main {
+      padding: 36px 40px;
+      border-left: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+    }
+
+    .proj-top-line {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 6px;
+    }
+
+    .proj-title {
+      font-family: var(--fn-disp);
+      font-weight: 800;
+      font-size: clamp(22px, 2.5vw, 34px);
+      color: var(--paper);
+      letter-spacing: -.015em;
+      line-height: 1.05;
+      transition: color .25s;
+    }
+
+    .project-row:hover .proj-title {
+      color: var(--signal);
+    }
+
+    .proj-benchmark {
+      font-family: var(--fn-mono);
+      font-size: 9.5px;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--signal-bg);
+      color: var(--signal);
+      border: 1px solid var(--signal-bd);
+    }
+
+    .proj-featured-badge {
+      font-family: var(--fn-mono);
+      font-size: 9px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: var(--gold-bg);
+      color: var(--gold);
+      border: 1px solid oklch(76% 0.14 80 / 0.35);
+    }
+
+    .proj-sub {
+      font-size: 11px;
+      color: var(--muted);
+      font-family: var(--fn-mono);
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .proj-desc {
+      font-size: 14.5px;
+      color: oklch(68% .006 240);
+      line-height: 1.7;
+      max-width: 680px;
+    }
+
+    .proj-expand {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height .5s cubic-bezier(.16, 1, .3, 1);
+    }
+
+    .project-row.open .proj-expand {
+      max-height: 600px;
+    }
+
+    .proj-bullets {
+      list-style: none;
+      margin-top: 20px;
+      padding-top: 18px;
+      border-top: 1px dashed var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .proj-bullets li {
+      font-size: 13.5px;
+      color: oklch(72% .006 240);
+      padding-left: 20px;
+      position: relative;
+      line-height: 1.65;
+    }
+
+    .proj-bullets li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--signal);
+      font-family: var(--fn-mono);
+    }
+
+    .proj-side {
+      padding: 36px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .proj-date {
+      font-family: var(--fn-mono);
+      font-size: 10px;
+      color: var(--muted);
+      letter-spacing: .08em;
+      text-align: right;
+    }
+
+    .proj-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: flex-end;
+      margin-top: 12px;
+    }
+
+    .proj-link {
+      font-family: var(--fn-mono);
+      font-size: 9.5px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--paper);
+      text-decoration: none;
+      border: 1px solid var(--border);
+      background: var(--surf2);
+      padding: 6px 11px;
+      border-radius: 4px;
+      transition: all .2s;
+    }
+
+    .proj-link:hover {
+      color: var(--ink);
+      background: var(--signal);
+      border-color: var(--signal);
+    }
+
+    .proj-toggle {
+      font-family: var(--fn-mono);
+      font-size: 10px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .project-row:hover .proj-toggle {
+      color: var(--signal);
+    }
+
+    .proj-chevron {
+      transition: transform .35s cubic-bezier(.16, 1, .3, 1);
+      display: inline-block;
+    }
+
+    .project-row.open .proj-chevron {
+      transform: rotate(180deg);
+    }
+
+    /* ── 03: SKILLS & ARSENAL ── */
+    #skills {
+      padding: clamp(80px, 10vw, 130px) 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .skills-helper {
+      font-family: var(--fn-mono);
+      font-size: 11px;
+      color: var(--muted);
+      max-width: 460px;
+      line-height: 1.6;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .skill-card {
+      background: var(--surf);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 28px;
+      transition: border-color .25s, transform .25s;
+    }
+
+    .skill-card:hover {
+      border-color: var(--signal-bd);
+    }
+
+    .sk-card-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .sk-title {
+      font-family: var(--fn-mono);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .2em;
+      color: var(--signal);
+      text-transform: uppercase;
+    }
+
+    .sk-count {
+      font-family: var(--fn-mono);
+      font-size: 10px;
+      color: var(--dim);
+    }
+
+    .sk-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .sk-pill {
+      font-family: var(--fn-mono);
+      font-size: 11px;
+      color: var(--paper);
+      background: var(--surf2);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 7px 13px;
+      transition: all .2s;
+    }
+
+    .sk-pill:hover,
+    .sk-pill.active {
+      color: var(--ink);
+      background: var(--signal);
+      border-color: var(--signal);
+      font-weight: 600;
+      transform: translateY(-1px);
+    }
+
+    /* ── 04: ABOUT & EDUCATION ── */
+    #about {
+      padding: clamp(80px, 10vw, 130px) 0;
+      border-top: 1px solid var(--border);
+      background: var(--surf);
+    }
+
+    .about-pullquote {
+      font-family: var(--fn-serif);
+      font-style: italic;
+      font-size: clamp(22px, 2.8vw, 38px);
+      color: var(--paper);
+      line-height: 1.35;
+      margin: 12px 0 56px;
+      padding-left: 28px;
+      border-left: 3px solid var(--signal);
+      max-width: 820px;
+    }
+
+    .about-pullquote em {
+      font-style: normal;
+      color: var(--signal);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 56px;
+      align-items: start;
+    }
+
+    .about-text {
+      font-size: 16px;
+      line-height: 1.85;
+      color: oklch(70% .006 240);
+    }
+
+    .about-text p+p {
+      margin-top: 20px;
+    }
+
+    .about-text strong {
+      color: var(--paper);
+      font-weight: 600;
+    }
+
+    /* Education Card */
+    .edu-card {
+      margin-top: 36px;
+      padding: 28px;
+      background: var(--ink);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      position: relative;
+    }
+
+    .edu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .edu-school {
+      font-family: var(--fn-disp);
+      font-weight: 800;
+      font-size: 22px;
+      color: var(--paper);
+    }
+
+    .edu-date {
+      font-family: var(--fn-mono);
+      font-size: 10px;
+      color: var(--signal);
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .edu-degree {
+      font-family: var(--fn-serif);
+      font-style: italic;
+      font-size: 17px;
+      color: var(--gold);
+      margin-bottom: 18px;
+    }
+
+    .coursework-label {
+      font-family: var(--fn-mono);
+      font-size: 9.5px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .coursework-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .cw-pill {
+      font-family: var(--fn-mono);
+      font-size: 10px;
+      color: var(--paper);
+      background: var(--surf2);
+      border: 1px solid var(--border);
+      padding: 5px 10px;
+      border-radius: 4px;
+    }
+
+    /* Live Telemetry / Currently Widget */
+    .currently-box {
+      padding: 28px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--ink);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .currently-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3px;
+      height: 100%;
+      background: var(--signal);
+    }
+
+    .curr-label {
+      font-family: var(--fn-mono);
+      font-size: 10px;
+      letter-spacing: .22em;
+      color: var(--signal);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .curr-label::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--signal);
+      box-shadow: 0 0 8px var(--signal);
+    }
+
+    .curr-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      padding: 13px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .curr-k {
+      font-family: var(--fn-mono);
+      font-size: 10px;
+      color: var(--muted);
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      flex-shrink: 0;
+    }
+
+    .curr-v {
+      font-family: var(--fn-disp);
+      font-size: 13.5px;
+      color: var(--paper);
+      font-weight: 600;
+      text-align: right;
+    }
+
+    /* ── 05: CONTACT ── */
+    #contact {
+      padding: clamp(90px, 12vw, 150px) 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .contact-big {
+      font-family: var(--fn-disp);
+      font-weight: 800;
+      font-size: clamp(38px, 6vw, 84px);
+      color: var(--paper);
+      letter-spacing: -.025em;
+      line-height: .94;
+      margin-bottom: 56px;
+      max-width: 860px;
+    }
+
+    .contact-big em {
+      font-style: italic;
+      font-family: var(--fn-serif);
+      font-weight: 400;
+      color: var(--signal);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .contact-sub {
+      font-family: var(--fn-serif);
+      font-style: italic;
+      font-size: clamp(17px, 1.8vw, 22px);
+      color: var(--muted);
+      line-height: 1.65;
+      max-width: 460px;
+      margin-bottom: 28px;
+    }
+
+    .contact-sub em {
+      font-style: normal;
+      color: var(--paper);
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      border-top: 1px solid var(--border);
+    }
+
+    .c-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 22px 12px;
+      border-bottom: 1px solid var(--border);
+      text-decoration: none;
+      color: var(--paper);
+      transition: all .25s;
+      background: transparent;
+      width: 100%;
+      text-align: left;
+      border-left: none;
+      border-right: none;
+    }
+
+    .c-link:hover {
+      padding-left: 22px;
+      background: var(--surf);
+    }
+
+    .c-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .c-type {
+      font-family: var(--fn-mono);
+      font-size: 9.5px;
+      color: var(--signal);
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+
+    .c-val {
+      font-family: var(--fn-disp);
+      font-weight: 700;
+      font-size: clamp(17px, 2vw, 22px);
+      letter-spacing: -.01em;
+    }
+
+    .c-arr {
+      font-family: var(--fn-mono);
+      font-size: 13px;
+      color: var(--muted);
+      transition: all .25s;
+    }
+
+    .c-link:hover .c-arr {
+      color: var(--signal);
+      transform: translate(4px, -2px);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 28px clamp(20px, 5vw, 64px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      background: var(--surf);
+      position: relative;
+      z-index: 1;
+    }
+
+    .foot-l,
+    .foot-r {
+      font-family: var(--fn-mono);
+      font-size: 10px;
+      color: var(--muted);
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .foot-btn {
+      font-family: var(--fn-mono);
+      font-size: 10px;
+      color: var(--signal);
+      background: transparent;
+      border: 1px solid var(--border);
+      padding: 5px 10px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      transition: all .2s;
+    }
+
+    .foot-btn:hover {
+      border-color: var(--signal);
+      background: var(--signal-bg);
+    }
+
+    /* ── MODALS (RESUME & COMMAND PALETTE) ── */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      background: oklch(5% 0.005 240 / 0.82);
+      backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      animation: fadeIn .2s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Command Palette */
+    .cmd-modal {
+      width: 100%;
+      max-width: 600px;
+      background: var(--surf);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 32px 90px oklch(0% 0 0 / 0.85);
+    }
+
+    .cmd-input-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .cmd-input {
+      width: 100%;
+      background: transparent;
+      border: none;
+      outline: none;
+      font-family: var(--fn-mono);
+      font-size: 14px;
+      color: var(--paper);
+    }
+
+    .cmd-list {
+      max-height: 360px;
+      overflow-y: auto;
+      padding: 8px;
+    }
+
+    .cmd-item {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 14px;
+      border-radius: 8px;
+      border: none;
+      background: transparent;
+      color: var(--paper);
+      text-align: left;
+      font-family: var(--fn-mono);
+      font-size: 12px;
+      transition: background .15s;
+    }
+
+    .cmd-item:hover {
+      background: var(--surf2);
+      color: var(--signal);
+    }
+
+    .cmd-item-cat {
+      font-size: 9px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .14em;
+    }
+
+    /* Resume Viewer Modal */
+    .resume-modal {
+      width: 100%;
+      max-width: 920px;
+      max-height: 90vh;
+      background: var(--surf);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 32px 100px oklch(0% 0 0 / 0.9);
+    }
+
+    .resume-modal-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 16px 24px;
+      background: var(--surf2);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .resume-modal-title {
+      font-family: var(--fn-mono);
+      font-size: 11px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--signal);
+    }
+
+    .resume-modal-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .rm-btn {
+      font-family: var(--fn-mono);
+      font-size: 10px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: 7px 12px;
+      border-radius: 5px;
+      border: 1px solid var(--border);
+      background: var(--ink);
+      color: var(--paper);
+      transition: all .2s;
+    }
+
+    .rm-btn:hover {
+      border-color: var(--signal);
+      color: var(--signal);
+    }
+
+    .rm-btn.primary {
+      background: var(--signal);
+      color: var(--ink);
+      border-color: var(--signal);
+      font-weight: 600;
+    }
+
+    .resume-paper-scroll {
+      overflow-y: auto;
+      padding: clamp(16px, 4vw, 36px);
+      background: oklch(11% 0.005 240);
+    }
+
+    .resume-sheet {
+      background: #ffffff;
+      color: #111827;
+      max-width: 816px;
+      margin: 0 auto;
+      padding: clamp(24px, 4vw, 44px);
+      border-radius: 4px;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, Georgia, serif;
+      font-size: 12.5px;
+      line-height: 1.45;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+    }
+
+    .rs-header {
+      text-align: center;
+      margin-bottom: 14px;
+    }
+
+    .rs-name {
+      font-size: 24px;
+      font-weight: 800;
+      color: #000;
+      letter-spacing: -.01em;
+    }
+
+    .rs-contact {
+      font-size: 11.5px;
+      color: #374151;
+      margin-top: 4px;
+    }
+
+    .rs-contact a {
+      color: #00008b;
+      text-decoration: none;
+    }
+
+    .rs-sec-title {
+      font-size: 11.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: #000;
+      border-bottom: 1.5px solid #111;
+      padding-bottom: 2px;
+      margin: 14px 0 8px;
+    }
+
+    .rs-entry {
+      margin-bottom: 10px;
+    }
+
+    .rs-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .rs-org {
+      font-weight: 700;
+      color: #000;
+    }
+
+    .rs-role {
+      font-style: italic;
+      color: #1f2937;
+    }
+
+    .rs-list {
+      padding-left: 18px;
+      margin-top: 3px;
+    }
+
+    .rs-list li {
+      margin-bottom: 2.5px;
+      color: #1f2937;
+    }
+
+    /* Toast notification */
+    .toast-msg {
+      position: fixed;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3000;
+      background: var(--signal);
+      color: var(--ink);
+      font-family: var(--fn-mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: 10px 20px;
+      border-radius: 999px;
+      box-shadow: 0 12px 32px oklch(0% 0 0 / 0.6);
+      animation: fadeIn .2s ease-out;
+    }
+
+    /* ── TWEAKS PANEL ── */
+    #tweaks-panel {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 2500;
+      background: var(--surf2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 22px;
+      width: 260px;
+      display: none;
+      box-shadow: 0 24px 64px oklch(0% 0 0 / .85);
+    }
+
+    #tweaks-panel.on {
+      display: block;
+    }
+
+    .twk-h {
+      font-family: var(--fn-mono);
+      font-size: 10px;
+      color: var(--signal);
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .twk-close {
+      color: var(--muted);
+      background: none;
+      border: none;
+      font-size: 14px;
+    }
+
+    .twk-row {
+      margin-bottom: 16px;
+    }
+
+    .twk-lbl {
+      font-family: var(--fn-mono);
+      font-size: 9px;
+      color: var(--muted);
+      display: block;
+      margin-bottom: 6px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .twk-row select,
+    .twk-row input[type=range] {
+      width: 100%;
+      background: var(--surf);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      color: var(--paper);
+      font-family: var(--fn-mono);
+      font-size: 10px;
+      padding: 7px;
+    }
+
+    /* ── RESPONSIVE BREAKPOINTS ── */
+    @media (max-width: 1080px) {
+      .metrics-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .metric-cell:nth-child(3) {
+        border-right: none;
+      }
+
+      .metric-cell:nth-child(4),
+      .metric-cell:nth-child(5) {
+        border-top: 1px solid var(--border);
+      }
+
+      .exp-card {
+        grid-template-columns: 220px 1fr;
+        gap: 28px;
+      }
+
+      .project-row {
+        grid-template-columns: 48px 1fr 190px;
+      }
+
+      .proj-main {
+        padding: 28px 24px;
+      }
+
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+
+    @media (max-width: 860px) {
+
+      .nav-center,
+      .cmd-btn {
+        display: none;
+      }
+
+      .mob-menu-btn {
+        display: inline-flex;
+      }
+
+      .metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .metric-cell {
+        border-right: 1px solid var(--border) !important;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .metric-cell:nth-child(2n) {
+        border-right: none !important;
+      }
+
+      .metric-cell:last-child {
+        grid-column: 1 / -1;
+        border-right: none !important;
+        border-bottom: none;
+      }
+
+      .exp-card {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 32px 12px;
+      }
+
+      .project-row {
+        grid-template-columns: 1fr;
+      }
+
+      .proj-idx {
+        display: none;
+      }
+
+      .proj-main {
+        border: none;
+        padding: 28px 12px 16px;
+      }
+
+      .proj-side {
+        padding: 0 12px 28px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .proj-toggle {
+        margin-top: 0;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-cta-cluster {
+        align-items: flex-start;
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .metrics-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .metric-cell {
+        border-right: none !important;
+        padding: 20px;
+      }
+
+      .hero-btns {
+        width: 100%;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .work-search {
+        width: 100%;
+      }
+
+      .work-search-wrap {
+        width: 100%;
+      }
+
+      .resume-nav-btn span.hide-xs {
+        display: none;
+      }
+    }
+
+    /* ── PRINT STYLES (Prints crisp 1-page resume directly) ── */
+    @media print {
+      body {
+        background: #fff !important;
+        color: #000 !important;
+      }
+
+      #noise,
+      #c-dot,
+      #c-ring,
+      .site-nav,
+      #hero,
+      .metrics-strip,
+      .marquee-strip,
+      #experience,
+      #work,
+      #skills,
+      #about,
+      #contact,
+      footer,
+      #tweaks-panel,
+      .resume-modal-bar {
+        display: none !important;
+      }
+
+      .modal-backdrop {
+        position: static !important;
+        background: #fff !important;
+        padding: 0 !important;
+      }
+
+      .resume-modal {
+        max-width: 100% !important;
+        max-height: none !important;
+        border: none !important;
+        box-shadow: none !important;
+      }
+
+      .resume-paper-scroll {
+        padding: 0 !important;
+        overflow: visible !important;
+        background: #fff !important;
+      }
+
+      .resume-sheet {
+        box-shadow: none !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<div id="c-dot"></div>
-<div id="c-ring"></div>
-<canvas id="noise"></canvas>
+  <div id="c-dot"></div>
+  <div id="c-ring"></div>
+  <canvas id="noise"></canvas>
 
-<nav>
-  <span class="nav-logo">AC</span>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#work">Work</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
+  <div id="root"></div>
 
-<div id="root"></div>
-
-<div id="tweaks-panel">
-  <div class="twk-h">⊙ Tweaks <span class="twk-close" id="twk-close">✕</span></div>
-  <div class="twk-row">
-    <label class="twk-lbl">Signal Color</label>
-    <select id="twk-signal">
-      <option value="185">Cyan (default)</option>
-      <option value="80">Amber</option>
-      <option value="288">Violet</option>
-      <option value="22">Red</option>
-      <option value="145">Emerald</option>
-    </select>
+  <div id="tweaks-panel">
+    <div class="twk-h">⊙ Visual Tweaks <button class="twk-close" id="twk-close" aria-label="Close tweaks">✕</button>
+    </div>
+    <div class="twk-row">
+      <label class="twk-lbl">Signal Accent</label>
+      <select id="twk-signal">
+        <option value="185">Cyan Signal (Default)</option>
+        <option value="80">Quant Gold</option>
+        <option value="145">Terminal Emerald</option>
+        <option value="275">Electric Violet</option>
+        <option value="25">Coral Red</option>
+      </select>
+    </div>
+    <div class="twk-row">
+      <label class="twk-lbl">Surface Depth</label>
+      <input type="range" id="twk-bg" min="8" max="20" value="11" step="1" />
+    </div>
+    <div class="twk-row">
+      <label class="twk-lbl">Film Grain</label>
+      <input type="range" id="twk-noise" min="0" max="7" value="2.4" step="0.5" />
+    </div>
   </div>
-  <div class="twk-row">
-    <label class="twk-lbl">Background Depth</label>
-    <input type="range" id="twk-bg" min="8" max="20" value="14" step="1"/>
-  </div>
-  <div class="twk-row">
-    <label class="twk-lbl">Noise Grain</label>
-    <input type="range" id="twk-noise" min="0" max="8" value="3" step="1"/>
-  </div>
-</div>
 
-<script>
-/* ── CURSOR ── */
-const dot = document.getElementById('c-dot');
-const ring = document.getElementById('c-ring');
-let mx = innerWidth/2, my = innerHeight/2, rx = mx, ry = my;
-addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
-(function loop() {
-  dot.style.left = mx + 'px'; dot.style.top = my + 'px';
-  rx += (mx - rx) * .1; ry += (my - ry) * .1;
-  ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
-  requestAnimationFrame(loop);
-})();
-document.addEventListener('mouseover', e => {
-  if (e.target.closest('a,button,.project-row,.c-link,.wf,select,input,.twk-close'))
-    document.body.classList.add('hov');
-  else document.body.classList.remove('hov');
-});
+  <script>
+    /* ── CUSTOM CURSOR & NOISE ── */
+    const dot = document.getElementById('c-dot');
+    const ring = document.getElementById('c-ring');
+    const isFinePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
-/* ── NOISE ── */
-const nc = document.getElementById('noise');
-const nctx = nc.getContext('2d');
-let noiseOp = 0.028;
-function resizeNoise() { nc.width = innerWidth; nc.height = innerHeight; }
-resizeNoise(); addEventListener('resize', resizeNoise);
-(function grain() {
-  const W = nc.width, H = nc.height;
-  const id = nctx.createImageData(W, H); const d = id.data;
-  for (let i = 0; i < d.length; i += 4) { const v = Math.random()*255; d[i]=d[i+1]=d[i+2]=v; d[i+3]=255; }
-  nctx.putImageData(id, 0, 0); nc.style.opacity = noiseOp;
-  requestAnimationFrame(grain);
-})();
+    if (isFinePointer) {
+      let mx = innerWidth / 2, my = innerHeight / 2, rx = mx, ry = my;
+      window.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; }, { passive: true });
+      (function cursorLoop() {
+        dot.style.left = mx + 'px'; dot.style.top = my + 'px';
+        rx += (mx - rx) * 0.14; ry += (my - ry) * 0.14;
+        ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
+        requestAnimationFrame(cursorLoop);
+      })();
+      document.addEventListener('mouseover', e => {
+        if (e.target.closest('a,button,.project-row,.c-link,.wf,.sk-pill,.tech-tag,select,input'))
+          document.body.classList.add('hov');
+        else document.body.classList.remove('hov');
+      });
+    }
 
-/* ── TWEAKS ── */
-window.addEventListener('message', e => {
-  if (e.data?.type === '__activate_edit_mode')   document.getElementById('tweaks-panel').classList.add('on');
-  if (e.data?.type === '__deactivate_edit_mode') document.getElementById('tweaks-panel').classList.remove('on');
-});
-window.parent.postMessage({ type: '__edit_mode_available' }, '*');
-document.getElementById('twk-close').addEventListener('click', () => {
-  document.getElementById('tweaks-panel').classList.remove('on');
-  window.parent.postMessage({ type: '__edit_mode_dismissed' }, '*');
-});
-document.getElementById('twk-signal').addEventListener('change', function() {
-  const h = this.value;
-  document.documentElement.style.setProperty('--signal', `oklch(72% 0.21 ${h})`);
-  document.documentElement.style.setProperty('--signal-d', `oklch(52% 0.17 ${h})`);
-  document.documentElement.style.setProperty('--signal-bg', `oklch(72% 0.21 ${h} / 0.07)`);
-  const goldH = (+h + 255) % 360;
-  document.documentElement.style.setProperty('--gold', `oklch(72% 0.14 ${goldH})`);
-  window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { signalHue: h } }, '*');
-});
-document.getElementById('twk-bg').addEventListener('input', function() {
-  const v = parseInt(this.value);
-  document.documentElement.style.setProperty('--ink', `oklch(${v}% 0.005 240)`);
-  document.documentElement.style.setProperty('--surf', `oklch(${v+3}% 0.005 240)`);
-  document.documentElement.style.setProperty('--surf2', `oklch(${v+5}% 0.005 240)`);
-  document.documentElement.style.setProperty('--border', `oklch(${v+8}% 0.005 240)`);
-});
-document.getElementById('twk-noise').addEventListener('input', function() { noiseOp = this.value / 100; });
+    /* ── STATIC/LOW-OVERHEAD NOISE CANVAS ── */
+    const nc = document.getElementById('noise');
+    const nctx = nc.getContext('2d');
+    function renderNoise() {
+      const W = nc.width = 256;
+      const H = nc.height = 256;
+      const id = nctx.createImageData(W, H);
+      const d = id.data;
+      for (let i = 0; i < d.length; i += 4) {
+        const v = Math.random() * 255;
+        d[i] = d[i + 1] = d[i + 2] = v;
+        d[i + 3] = 255;
+      }
+      nctx.putImageData(id, 0, 0);
+    }
+    renderNoise();
+
+    /* ── TWEAKS CONTROLS ── */
+    document.getElementById('twk-close').addEventListener('click', () => {
+      document.getElementById('tweaks-panel').classList.remove('on');
+    });
+    document.getElementById('twk-signal').addEventListener('change', function () {
+      const h = this.value;
+      document.documentElement.style.setProperty('--signal', `oklch(74% 0.19 ${h})`);
+      document.documentElement.style.setProperty('--signal-d', `oklch(54% 0.16 ${h})`);
+      document.documentElement.style.setProperty('--signal-bg', `oklch(74% 0.19 ${h} / 0.08)`);
+      document.documentElement.style.setProperty('--signal-bd', `oklch(74% 0.19 ${h} / 0.35)`);
+    });
+    document.getElementById('twk-bg').addEventListener('input', function () {
+      const v = parseInt(this.value, 10);
+      document.documentElement.style.setProperty('--ink', `oklch(${v}% 0.006 240)`);
+      document.documentElement.style.setProperty('--surf', `oklch(${v + 3}% 0.006 240)`);
+      document.documentElement.style.setProperty('--surf2', `oklch(${v + 7}% 0.008 240)`);
+      document.documentElement.style.setProperty('--border', `oklch(${v + 11}% 0.008 240)`);
+    });
+    document.getElementById('twk-noise').addEventListener('input', function () {
+      nc.style.opacity = this.value / 100;
+    });
+  </script>
+
+  <script type="text/plain" id="latex-resume-source">
+%=====================================================================
+%  Aarya Chaurasia -- Resume (Single-Page Optimized)
+%  Compile with pdflatex on Overleaf
+%=====================================================================
+\documentclass[9pt, letterpaper]{extarticle}
+
+\usepackage[left=0.38in, right=0.38in, top=0.22in, bottom=0.22in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+\definecolor{darkblue}{RGB}{0, 0, 139}
+
+\titleformat{\section}{\normalsize\bfseries\uppercase}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{1.0ex}{0.5ex}
+
+\newcommand{\entry}[4]{%
+  \noindent\textbf{#1} \hfill #2 \\
+  \textit{#3} \hfill #4%
+}
+\newcommand{\project}[3]{%
+  \noindent\textbf{#1} $|$ \textit{#2} \hfill #3%
+}
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=*, nosep, topsep=0.25ex, itemsep=0.15ex, label=\textbullet}
+\newcommand{\gap}{\vspace{0.8ex}}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{center}
+    {\LARGE \textbf{Aarya Chaurasia}}\\[0.3ex]
+    Vancouver, BC, Canada
+    $|$ \href{mailto:aarya09@gmail.com}{\textcolor{darkblue}{aarya09@gmail.com}}
+    $|$ \href{https://github.com/Git-Aarya}{\textcolor{darkblue}{github.com/Git-Aarya}}
+    $|$ \href{https://linkedin.com/in/aarya-chaurasia}{\textcolor{darkblue}{linkedin.com/in/aarya-chaurasia/}}
+\end{center}
+\vspace{-1.2ex}
+
+\section*{EDUCATION}
+\textbf{University of British Columbia} \hfill Vancouver, BC \\
+\textit{Bachelor of Science in Statistics, Computer Science Concentration} \hfill Sept 2023 -- May 2028
+\begin{tight}
+    \item \textbf{Relevant Coursework:} Data Structures \& Algorithms, Databases, Software Construction, Machine Learning, Statistical Inference, Linear Algebra.
+\end{tight}
+
+\section*{TECHNICAL SKILLS}
+\begin{tight}
+    \item \textbf{Languages:} Python, SQL, Java, C++, C\#, R, Bash, TypeScript, VBA
+    \item \textbf{AI \& Machine Learning:} PyTorch, LangChain, LLM Evaluation, Hugging Face Transformers, vLLM, Ollama, Scikit-learn, SHAP, SciPy
+    \item \textbf{Data Engineering \& BI:} PostgreSQL, SQL Server (SSMS), Apache Spark / PySpark, Apache Kafka, Airflow, Polars, DuckDB, Pandas, Power BI, Tableau
+    \item \textbf{Cloud \& SDLC:} Microsoft Azure, AWS, .NET, Docker, Kubernetes, FastAPI, Power Platform, Git, CI/CD (GitHub Actions), pytest, Linux / Unix
+\end{tight}
+
+\section*{EXPERIENCE}
+\entry{Ericsson}{Ottawa, ON}{Incoming Data Engineer Co-op (8-Month Co-op Term)}{Jan 2027 -- Aug 2027}
+\begin{tight}
+    \item Will engineer and maintain scalable ETL pipelines in \textbf{Java}, \textbf{C\# (.NET)}, and \textbf{SQL Server} to extract, standardize, and deliver multi-source telemetry across code builds, automated test tracing, defect tracking, and product delivery systems.
+    \item Will design business analytics software and data warehouse schemas on large-scale telecommunications datasets within an \textbf{Agile} engineering workflow.
+\end{tight}
+
+\gap
+\entry{Mackenzie Investments}{Toronto, ON}{AI Automation Engineer Intern, Trust Accounting Team}{Sept 2026 -- Dec 2026}
+\begin{tight}
+    \item Engineering \textbf{11} automated ETL pipelines (\textbf{8 in production}, \textbf{3 in UAT/dev}) on \textbf{Microsoft Azure} using \textbf{Python} (\textbf{pandas}), \textbf{Power Query}, \textbf{Excel VBA}, and \textbf{Power Automate}, processing \textbf{1,000s of rows weekly} and on track to save \textbf{$\sim$100 hours/week} by term end.
+    \item Architected a centralized governance portal using a \textbf{Power Apps} frontend and interactive \textbf{Power BI} dashboards for the \textbf{30-person} Trust Accounting team to track AI-enabled workflows, manage multi-stage approvals, and enforce audit compliance.
+    \item Partnering with technical and business stakeholders across the \textbf{30-member} division to eliminate manual reconciliation bottlenecks and scale enterprise automation workflows.
+\end{tight}
+
+\gap
+\entry{UBC Trading Group (UBCTG)}{Vancouver, BC}{Quantitative Researcher, Portfolio Construction Team}{Feb 2026 -- Present}
+\begin{tight}
+    \item Leading \textbf{SHAP} integration into the backtest engine, attributing final asset weights to factor views and portfolio constraints across a \textbf{Black-Litterman} and \textbf{MOSEK} optimization pipeline.
+    \item Built a \textbf{KernelSHAP} approximation framework in \textbf{Python} using custom model wrappers to systematically mask inputs, cutting attribution runtime from exponential to \textbf{12 seconds} per rebalance.
+    \item Shipped asset-level waterfall and constraint-friction visualizations used by portfolio managers to quantify constraint cost and tune view confidence levels.
+\end{tight}
+
+\gap
+\entry{StatGit}{Vancouver, BC}{Founder \& AI Systems Engineer}{Jan 2026 -- Aug 2026}
+\begin{tight}
+    \item Architected a local-first behavioral version control system for AI agents, including a zero-telemetry ``LLM-as-a-Judge'' evaluation pipeline on \textbf{Ollama} that scores agent traces for goal alignment.
+    \item Built the analytics backend in \textbf{FastAPI}, \textbf{DuckDB}, and \textbf{Polars}, computing Decision Path Entropy and a Tool-Use Efficiency Index (TUEI) over \textbf{10,000+} agent traces in under \textbf{45 ms}.
+    \item Secured Letters of Intent from \textbf{2} B2B design partners to pilot the platform, validating demand for agent observability tooling.
+\end{tight}
+
+\section*{TECHNICAL PROJECTS}
+\project{Open Source Contributor -- vLLM}{Python, Hugging Face Transformers, pytest, CI/CD}{May 2026 -- Aug 2026}
+\begin{tight}
+    \item Authored \texttt{resolve\_text\_config}, a recursive configuration parser that resolves nested config errors in \textbf{vLLM}, preventing recursive model initialization failures and restoring \textbf{Tarsier2} support on Hugging Face Transformers v5. \emph{(\href{https://github.com/vllm-project/vllm/pull/43305}{PR \#43305})}
+    \item Covered flat and deeply nested config paths with offline unit tests, clearing \textbf{ruff} and \textbf{pre-commit} CI gates to prevent upstream regressions.
+\end{tight}
+
+\gap
+\project{Chronos -- Low-Latency Limit Order Book}{C++, Linux, Bash, Data Structures}{Apr 2026 -- Jun 2026}
+\begin{tight}
+    \item Engineered an object-oriented matching engine in \textbf{C++} on \textbf{Linux} simulating electronic trading venues, sustaining order-to-execution latency under \textbf{15 $\mu$s}.
+    \item Implemented lock-free data structures and custom memory pooling to achieve \textbf{O(1)} limit order insertion, matching, and cancellation, benchmarked at \textbf{125,000 orders/sec} under replayed market load.
+    \item Automated build pipelines and unit test environments with \textbf{Bash}, ensuring reliability across high-throughput simulation runs.
+\end{tight}
+
+\gap
+\project{Aegis -- Distributed Market Analytics Platform}{Java, PostgreSQL, SQL, Windows/Unix}{Jan 2026 -- Mar 2026}
+\begin{tight}
+    \item Built an enterprise financial analytics application in \textbf{Java} and \textbf{PostgreSQL} that ingests high-volume market feeds and validates business rules dynamically at write time.
+    \item Designed indexed \textbf{SQL} schemas and analytical queries to detect algorithmic pricing anomalies across \textbf{10,000,000+ rows}, deployed as a hybrid service across \textbf{Windows} and \textbf{Unix} servers.
+\end{tight}
+\end{document}
 </script>
 
-<script type="text/babel">
-const { useState, useEffect, useRef } = React;
+  <script type="text/babel">
+    const { useState, useEffect, useRef, useMemo } = React;
 
-/* ── FIT TEXT: makes a text element fill its container width ── */
-function fitText(el) {
-  if (!el) return;
-  const parent = el.parentElement;
-  let lo = 10, hi = 600;
-  el.style.fontSize = hi + 'px';
-  while (hi - lo > 0.5) {
-    const mid = (lo + hi) / 2;
-    el.style.fontSize = mid + 'px';
-    if (el.scrollWidth <= parent.clientWidth) lo = mid;
-    else hi = mid;
-  }
-  el.style.fontSize = lo + 'px';
-}
+    /* ── RAW LATEX RESUME SOURCE FOR 1-CLICK COPY ── */
+    const LATEX_RESUME = document.getElementById('latex-resume-source').textContent.trim();
 
-/* ── INTERSECTION OBSERVER FOR FI ── */
-function useFI(delay = 0) {
-  const ref = useRef();
-  useEffect(() => {
-    const el = ref.current; if (!el) return;
-    el.classList.add('fi');
-    const obs = new IntersectionObserver(([e]) => {
-      if (e.isIntersecting) { setTimeout(() => el.classList.add('vis'), delay); obs.disconnect(); }
-    }, { threshold: 0.06 });
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, []);
-  return ref;
-}
-function FI({ children, delay = 0, tag = 'div', style }) {
-  const ref = useFI(delay);
-  return React.createElement(tag, { ref, style }, children);
-}
-
-/* ── SIGNAL CANVAS (hero background) ── */
-function HeroCanvas() {
-  const ref = useRef();
-  useEffect(() => {
-    const canvas = ref.current; if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    let W, H, t = 0, animId;
-    function resize() { W = canvas.width = canvas.offsetWidth; H = canvas.height = canvas.offsetHeight; }
-    resize(); window.addEventListener('resize', resize);
-    function draw() {
-      ctx.clearRect(0, 0, W, H);
-      // Grid dots
-      ctx.fillStyle = 'oklch(100% 0 0 / 0.04)';
-      const spacing = 48;
-      for (let x = 0; x < W; x += spacing) {
-        for (let y = 0; y < H; y += spacing) {
-          const pulse = Math.sin(t * 0.008 + x * 0.02 + y * 0.015) * 0.5 + 0.5;
-          ctx.globalAlpha = pulse * 0.06;
-          ctx.beginPath(); ctx.arc(x, y, 1, 0, Math.PI * 2); ctx.fill();
-        }
+    /* ── CLIPBOARD HELPER ── */
+    function copyToClipboard(text, onDone) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(onDone).catch(() => fallbackCopy(text, onDone));
+      } else {
+        fallbackCopy(text, onDone);
       }
-      ctx.globalAlpha = 1;
-      // Main wave
-      ctx.beginPath();
-      const amp = H * 0.04, freq = 0.006;
-      for (let x = 0; x <= W; x++) {
-        const y = H * .62
-          + Math.sin((x * freq + t * 0.012) * Math.PI * 2) * amp
-          + Math.sin((x * freq * .5 + t * 0.008) * Math.PI * 2) * amp * .6
-          + Math.sin((x * freq * 2.3 + t * 0.02) * Math.PI * 2) * amp * .25;
-        x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
-      }
-      const grad = ctx.createLinearGradient(0, 0, W, 0);
-      grad.addColorStop(0, 'oklch(72% 0.21 185 / 0)');
-      grad.addColorStop(0.3, 'oklch(72% 0.21 185 / 0.45)');
-      grad.addColorStop(0.7, 'oklch(72% 0.21 185 / 0.35)');
-      grad.addColorStop(1, 'oklch(72% 0.21 185 / 0)');
-      ctx.strokeStyle = grad;
-      ctx.lineWidth = 1.5; ctx.stroke();
-      // Traveling glow dot
-      const cx = ((t * 1.8) % (W + 200)) - 100;
-      const cy = H * .62
-        + Math.sin((cx * freq + t * 0.012) * Math.PI * 2) * amp
-        + Math.sin((cx * freq * .5 + t * 0.008) * Math.PI * 2) * amp * .6;
-      if (cx >= 0 && cx <= W) {
-        const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, 28);
-        g.addColorStop(0, 'oklch(72% 0.21 185 / 0.9)');
-        g.addColorStop(1, 'oklch(72% 0.21 185 / 0)');
-        ctx.beginPath(); ctx.fillStyle = g;
-        ctx.arc(cx, cy, 28, 0, Math.PI * 2); ctx.fill();
-      }
-      t++; animId = requestAnimationFrame(draw);
     }
-    draw();
-    return () => { window.removeEventListener('resize', resize); cancelAnimationFrame(animId); };
-  }, []);
-  return <canvas ref={ref} className="hero-canvas" style={{ position:'absolute', inset:0, width:'100%', height:'100%' }} />;
-}
+    function fallbackCopy(text, onDone) {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); } catch (e) { }
+      document.body.removeChild(ta);
+      if (onDone) onDone();
+    }
 
-/* ── MARQUEE ── */
-const MARQUEE_ITEMS = [
-  'Quantitative Systems', 'Machine Learning', 'Statistical Inference',
-  'High-Performance C++', 'Stochastic Processes', 'Monte Carlo',
-  'Black-Litterman', 'React', 'FastAPI', 'Open to Co-op 2026',
-  'UBC Trading Group', 'Weather Derivatives', 'Data Version Control',
-];
-function Marquee() {
-  const doubled = [...MARQUEE_ITEMS, ...MARQUEE_ITEMS];
-  return (
-    <div className="marquee-strip">
-      <div className="marquee-inner">
-        {doubled.map((s, i) => (
-          <div key={i} className="marquee-item">
-            <span className="marquee-dot"></span>
-            {s}
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
+    /* ── INTERSECTION OBSERVER HOOK ── */
+    function FI({ children, delay = 0, className = '' }) {
+      const ref = useRef();
+      useEffect(() => {
+        const el = ref.current;
+        if (!el) return;
+        el.classList.add('fi');
+        const obs = new IntersectionObserver(([e]) => {
+          if (e.isIntersecting) {
+            setTimeout(() => el.classList.add('vis'), delay);
+            obs.disconnect();
+          }
+        }, { threshold: 0.05 });
+        obs.observe(el);
+        return () => obs.disconnect();
+      }, [delay]);
+      return <div ref={ref} className={className}>{children}</div>;
+    }
 
-/* ── HERO ── */
-function Hero() {
-  return (
-    <section id="hero">
-      <HeroCanvas />
-      <div className="hero-meta-top">
-        <div>
-          <span className="hero-badge">Available for Co-op 2026</span>
-          <span className="hero-loc" style={{display:'block',marginTop:8}}>Vancouver · British Columbia</span>
-        </div>
+    /* ── HERO BACKGROUND CANVAS ── */
+    function HeroCanvas() {
+      const ref = useRef();
+      useEffect(() => {
+        const canvas = ref.current;
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        let W, H, t = 0, animId;
+        function resize() {
+          W = canvas.width = canvas.offsetWidth;
+          H = canvas.height = canvas.offsetHeight;
+        }
+        resize();
+        window.addEventListener('resize', resize);
+        function draw() {
+          ctx.clearRect(0, 0, W, H);
+          ctx.fillStyle = 'oklch(100% 0 0 / 0.04)';
+          const spacing = 54;
+          for (let x = 0; x < W; x += spacing) {
+            for (let y = 0; y < H; y += spacing) {
+              const pulse = Math.sin(t * 0.008 + x * 0.015 + y * 0.015) * 0.5 + 0.5;
+              ctx.globalAlpha = pulse * 0.055;
+              ctx.beginPath();
+              ctx.arc(x, y, 1.1, 0, Math.PI * 2);
+              ctx.fill();
+            }
+          }
+          ctx.globalAlpha = 1;
+          ctx.beginPath();
+          const amp = H * 0.038, freq = 0.0055;
+          for (let x = 0; x <= W; x += 2) {
+            const y = H * 0.58
+              + Math.sin((x * freq + t * 0.01) * Math.PI * 2) * amp
+              + Math.sin((x * freq * 0.5 + t * 0.007) * Math.PI * 2) * amp * 0.6;
+            x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+          }
+          const grad = ctx.createLinearGradient(0, 0, W, 0);
+          grad.addColorStop(0, 'oklch(74% 0.19 185 / 0)');
+          grad.addColorStop(0.3, 'oklch(74% 0.19 185 / 0.42)');
+          grad.addColorStop(0.7, 'oklch(74% 0.19 185 / 0.32)');
+          grad.addColorStop(1, 'oklch(74% 0.19 185 / 0)');
+          ctx.strokeStyle = grad;
+          ctx.lineWidth = 1.5;
+          ctx.stroke();
+          t++;
+          animId = requestAnimationFrame(draw);
+        }
+        draw();
+        return () => {
+          window.removeEventListener('resize', resize);
+          cancelAnimationFrame(animId);
+        };
+      }, []);
+      return <canvas ref={ref} className="hero-canvas" style={{ width: '100%', height: '100%' }} />;
+    }
 
-      </div>
-      <div className="hero-name" style={{paddingTop:'28vh'}}>
-        <span className="hero-line hero-line-1">AARYA</span>
-        <span className="hero-line hero-line-2">
-          CHAU<span className="outline-signal">RA</span>SIA
-        </span>
-        <div style={{marginTop:20, fontFamily:'var(--fn-mono)', fontSize:11, letterSpacing:'.2em', textTransform:'uppercase', color:'var(--muted)'}}>
-          Vancouver, BC &nbsp;·&nbsp; UBC Statistics + CS
-        </div>
-      </div>
-      <div className="hero-bottom">
-        <p className="hero-desc">
-          Building <em>quantitative systems</em> at the boundary of statistics,
-          machine learning, and high-performance engineering.
-        </p>
-        <div className="hero-scroll">scroll</div>
-      </div>
-    </section>
-  );
-}
+    /* ── DATA: EXPERIENCE ── */
+    const EXPERIENCES = [
+      {
+        id: 'ericsson',
+        company: 'Ericsson',
+        location: 'Ottawa, ON',
+        role: 'Incoming Data Engineer Co-op',
+        badge: '8-Month Co-op Term',
+        period: 'Jan 2027 — Aug 2027',
+        impact: 'Telecom Data & ETL Infrastructure',
+        bullets: [
+          'Will engineer and maintain scalable ETL pipelines in Java, C# (.NET), and SQL Server to extract, standardize, and deliver multi-source telemetry across code builds, automated test tracing, defect tracking, and product delivery systems.',
+          'Will design business analytics software and data warehouse schemas on large-scale telecommunications datasets within an Agile engineering workflow.',
+        ],
+        tags: ['Java', 'C#', '.NET', 'SQL Server (SSMS)', 'SQL', 'ETL Pipelines', 'Data Warehousing', 'Agile'],
+      },
+      {
+        id: 'mackenzie',
+        company: 'Mackenzie Investments',
+        location: 'Toronto, ON',
+        role: 'AI Automation Engineer Intern, Trust Accounting Team',
+        badge: 'Current Internship',
+        period: 'Sept 2026 — Dec 2026',
+        impact: '~100 hrs/wk Saved · 11 Azure ETL Pipelines',
+        bullets: [
+          'Engineering 11 automated ETL pipelines (8 in production, 3 in UAT/dev) on Microsoft Azure using Python (Pandas), Power Query, Excel VBA, and Power Automate, processing 1,000s of rows weekly and on track to save ~100 hours/week by term end.',
+          'Architected a centralized governance portal using a Power Apps frontend and interactive Power BI dashboards for the 30-person Trust Accounting team to track AI-enabled workflows, manage multi-stage approvals, and enforce audit compliance.',
+          'Partnering with technical and business stakeholders across the 30-member division to eliminate manual reconciliation bottlenecks and scale enterprise automation workflows.',
+        ],
+        tags: ['Python', 'Pandas', 'Microsoft Azure', 'Power BI', 'Power Platform', 'VBA', 'ETL Pipelines', 'SQL'],
+      },
+      {
+        id: 'ubctg',
+        company: 'UBC Trading Group (UBCTG)',
+        location: 'Vancouver, BC',
+        role: 'Quantitative Researcher, Portfolio Construction Team',
+        badge: 'Quantitative Research',
+        period: 'Feb 2026 — Present',
+        impact: '12s KernelSHAP Attribution Runtime',
+        bullets: [
+          'Leading SHAP integration into the backtest engine, attributing final asset weights to factor views and portfolio constraints across a Black-Litterman and MOSEK optimization pipeline.',
+          'Built a KernelSHAP approximation framework in Python using custom model wrappers to systematically mask inputs, cutting attribution runtime from exponential to 12 seconds per rebalance.',
+          'Shipped asset-level waterfall and constraint-friction visualizations used by portfolio managers to quantify constraint cost and tune view confidence levels.',
+        ],
+        tags: ['Python', 'SHAP', 'Black-Litterman', 'MOSEK', 'SciPy', 'Statistical Inference', 'Portfolio Optimization'],
+      },
+      {
+        id: 'statgit-exp',
+        company: 'StatGit',
+        location: 'Vancouver, BC',
+        role: 'Founder & AI Systems Engineer',
+        badge: '2 B2B Design Partner LOIs',
+        period: 'Jan 2026 — Aug 2026',
+        impact: '< 45 ms over 10,000+ Agent Traces',
+        links: [
+          { label: 'statgit.com ↗', url: 'https://statgit.com/' },
+          { label: 'GitHub ↗', url: 'https://github.com/Git-Aarya/statgit' },
+        ],
+        bullets: [
+          'Architected a local-first behavioral version control system for AI agents, including a zero-telemetry "LLM-as-a-Judge" evaluation pipeline on Ollama that scores agent traces for goal alignment.',
+          'Built the analytics backend in FastAPI, DuckDB, and Polars, computing Decision Path Entropy and a Tool-Use Efficiency Index (TUEI) over 10,000+ agent traces in under 45 ms.',
+          'Secured Letters of Intent from 2 B2B design partners to pilot the platform, validating demand for agent observability tooling.',
+        ],
+        tags: ['Python', 'FastAPI', 'DuckDB', 'Polars', 'Ollama', 'LLM Evaluation', 'Agent Observability'],
+      },
+    ];
 
-/* ── ABOUT ── */
-function About() {
-  const currently = [
-    { k: 'Role', v: 'Quant Researcher @ UBCTG' },
-    { k: 'Building', v: 'StatGit' },
-    { k: 'Studying', v: 'Statistics @ UBC' },
-    { k: 'Status', v: 'Seeking Co-op 2026' },
-  ];
-  return (
-    <section id="about">
-      <div className="ghost-num">01</div>
-      <div className="wrap">
-        <FI>
-          <span className="sec-label">01 — About</span>
-          <h2 className="sec-title">Who I Am</h2>
-        </FI>
-        <FI delay={80}>
-          <p className="about-pullquote">
-            I work where <em>statistical theory</em> meets production systems —<br/>
-            correctness, performance, and explainability in everything I ship.
-          </p>
-        </FI>
-        <div className="about-grid">
-          <FI delay={120}>
-            <div className="about-text">
-              <p>I'm a <strong>third-year Statistics major</strong> at the University of British Columbia, pursuing a thematic concentration in Computer Science.</p>
-              <p>Currently leading <strong>SHAP integration</strong> into the backtest engine at UBC Trading Group — mapping factor views to portfolio weights through Black-Litterman methodology and MOSEK optimization. Before that, building AgriHedge: a C++ Monte Carlo pricing engine for weather derivatives.</p>
-              <p>I care deeply about three things: <strong>correctness</strong>, <strong>performance</strong>, and <strong>explainability</strong>. Everything I build has all three.</p>
+    /* ── DATA: PROJECTS ── */
+    const PROJECTS = [
+      {
+        num: '01',
+        title: 'vLLM — Open Source Contributor',
+        sub: 'High-Throughput LLM Inference Engine',
+        featured: true,
+        benchmark: 'Merged PR #43305',
+        date: 'May 2026 — Aug 2026',
+        cat: 'ai',
+        github: 'https://github.com/vllm-project/vllm/pull/43305',
+        desc: 'Authored resolve_text_config, a recursive configuration parser in upstream vLLM that resolves nested configuration errors, preventing recursive model initialization failures and restoring Tarsier2 support on Hugging Face Transformers v5.',
+        bullets: [
+          'Authored resolve_text_config, a recursive configuration parser that resolves nested config errors in vLLM, preventing recursive model initialization failures and restoring Tarsier2 support on Hugging Face Transformers v5 (PR #43305).',
+          'Covered flat and deeply nested config paths with offline unit tests, clearing ruff and pre-commit CI gates to prevent upstream regressions.',
+        ],
+        tags: ['Python', 'vLLM', 'Hugging Face Transformers', 'pytest', 'CI/CD (GitHub Actions)', 'Open Source'],
+      },
+      {
+        num: '02',
+        title: 'CHRONOS',
+        sub: 'Low-Latency C++ Limit Order Book & Matching Engine',
+        featured: true,
+        benchmark: '< 15 μs Latency · 125K orders/sec',
+        date: 'Apr 2026 — Jun 2026',
+        cat: 'systems',
+        github: 'https://github.com/Git-Aarya',
+        desc: 'Object-oriented electronic trading matching engine in C++ on Linux sustaining sub-15 microsecond order-to-execution latency via lock-free data structures and custom memory pooling.',
+        bullets: [
+          'Engineered an object-oriented matching engine in C++ on Linux simulating electronic trading venues, sustaining order-to-execution latency under 15 μs.',
+          'Implemented lock-free data structures and custom memory pooling to achieve O(1) limit order insertion, matching, and cancellation, benchmarked at 125,000 orders/sec under replayed market load.',
+          'Automated build pipelines and unit test environments with Bash, ensuring reliability across high-throughput simulation runs.',
+        ],
+        tags: ['C++', 'Linux / Unix', 'Bash', 'Lock-Free Data Structures', 'Memory Pooling', 'Low-Latency Systems'],
+      },
+      {
+        num: '03',
+        title: 'AEGIS',
+        sub: 'Distributed Market Analytics Platform',
+        featured: true,
+        benchmark: '10,000,000+ Rows · Hybrid Unix/Win',
+        date: 'Jan 2026 — Mar 2026',
+        cat: 'systems',
+        github: 'https://github.com/Git-Aarya',
+        desc: 'Enterprise financial analytics platform in Java and PostgreSQL ingesting high-volume market feeds, dynamically validating business rules at write time, and scanning 10M+ rows for pricing anomalies.',
+        bullets: [
+          'Built an enterprise financial analytics application in Java and PostgreSQL that ingests high-volume market feeds and validates business rules dynamically at write time.',
+          'Designed indexed SQL schemas and analytical queries to detect algorithmic pricing anomalies across 10,000,000+ rows, deployed as a hybrid service across Windows and Unix servers.',
+        ],
+        tags: ['Java', 'PostgreSQL', 'SQL', 'Linux / Unix', 'Distributed Systems', 'Financial Analytics'],
+      },
+      {
+        num: '04',
+        title: 'STATGIT',
+        sub: 'Behavioral Agent Version Control & Statistical Data Observability',
+        featured: true,
+        benchmark: '< 45 ms Analytics · Zero-Telemetry',
+        date: 'Jan 2026 — Aug 2026',
+        cat: 'ai',
+        github: 'https://github.com/Git-Aarya/statgit',
+        live: 'https://statgit.com/',
+        desc: 'Local-first behavioral version control CLI and FastAPI/DuckDB/Polars engine scoring LLM agent traces via Ollama and detecting multivariate dataset drift (PSI, Jensen-Shannon, Earth Mover\'s Distance).',
+        bullets: [
+          'Zero-telemetry "LLM-as-a-Judge" evaluation pipeline on Ollama scoring agent traces for goal alignment, Decision Path Entropy, and Tool-Use Efficiency Index (TUEI) over 10,000+ traces in < 45 ms.',
+          'Advanced statistical drift detection: PSI, Jensen-Shannon Divergence, Earth Mover\'s Distance, and Mahalanobis distance with automated PII guardrails and SHA-256 statistical fingerprints.',
+          'Direct cloud connectors to AWS, Azure, and Snowflake where compute is pushed down and only lightweight metadata returns.',
+        ],
+        tags: ['Python', 'FastAPI', 'DuckDB', 'Polars', 'Ollama', 'LLM Evaluation', 'AWS', 'Microsoft Azure', 'SciPy'],
+      },
+      {
+        num: '05',
+        title: 'CREDIDRIFT',
+        sub: 'Explainable Corporate Distress Forecasting',
+        benchmark: 'FinBERT + XGBoost + Black-Litterman',
+        date: 'Apr 2026',
+        cat: 'quant',
+        github: 'https://github.com/Git-Aarya',
+        desc: 'End-to-end credit distress forecasting pipeline combining SEC filing NLP sentiment extraction, XGBoost classification, and SHAP/LIME explainability translated into optimal Black-Litterman portfolio weights.',
+        bullets: [
+          'Sourced alternative datasets by scraping SEC filings and earnings call transcripts; applied Hugging Face FinBERT for executive sentiment extraction.',
+          'Conducted rigorous statistical validation for stationarity and residual diagnostics, then trained an XGBoost classifier to forecast corporate credit downgrades.',
+          'Unboxed non-linear predictions using SHAP and LIME and translated distress probabilities into optimal portfolio weights via Black-Litterman optimization.',
+        ],
+        tags: ['Python', 'Hugging Face Transformers', 'SHAP', 'Scikit-learn', 'Black-Litterman', 'Statistical Inference'],
+      },
+      {
+        num: '06',
+        title: 'AGRIHEDGE',
+        sub: 'Weather Derivative Monte Carlo Risk Engine',
+        benchmark: 'C++ Ornstein-Uhlenbeck Pricing',
+        date: 'Apr 2026',
+        cat: 'quant',
+        github: 'https://github.com/Git-Aarya',
+        desc: 'High-performance C++ Monte Carlo pricing engine for weather derivatives using Ornstein-Uhlenbeck stochastic processes, paired with a Python/PostgreSQL backend, R calibration, and React + Excel/VBA front-office tools.',
+        bullets: [
+          'Parallelized Monte Carlo simulations in C++ pricing weather derivatives via Ornstein-Uhlenbeck stochastic processes.',
+          'Python + PostgreSQL backend ingesting live climate API data; R for statistical calibration of historical crop yield correlations.',
+          'Omnichannel delivery: interactive React risk dashboard plus custom Excel/VBA add-in for front-office trading desks.',
+        ],
+        tags: ['C++', 'Python', 'R', 'PostgreSQL', 'VBA', 'Monte Carlo', 'TypeScript'],
+      },
+      {
+        num: '07',
+        title: 'XAIQUANT',
+        sub: 'Explainable Algorithmic Trading Inference Engine',
+        benchmark: 'PyTorch LSTM + SHAP on Cloud Run',
+        date: 'Jul 2025 — Aug 2025',
+        cat: 'quant',
+        github: 'https://github.com/Git-Aarya/XAIQUANT',
+        desc: 'Low-latency FastAPI + PyTorch inference engine forecasting equities via LSTM networks with real-time SHAP attribution breakdowns on every prediction, containerized with Docker.',
+        bullets: [
+          'Built a FastAPI + PyTorch backend executing LSTM time-series forecasting for real-time equity price prediction.',
+          'Integrated an NLU and SHAP explainability pipeline so every inference carries a full feature attribution breakdown.',
+          'Containerized with Docker for scalable cloud deployment alongside reproducible backtesting notebooks.',
+        ],
+        tags: ['Python', 'PyTorch', 'FastAPI', 'SHAP', 'Docker'],
+      },
+      {
+        num: '08',
+        title: 'AEROMETRIX',
+        sub: 'Cross-Platform Drone Telemetry Analyzer',
+        benchmark: 'Julia + C# .NET + Electron',
+        date: 'Mar 2026',
+        cat: 'fullstack',
+        github: 'https://github.com/Git-Aarya/AeroMetrix',
+        desc: 'Desktop telemetry suite bridging a numerical engine, a C# ASP.NET Core REST API, and a React/TypeScript/Electron frontend with automated GitHub Actions CI/CD.',
+        bullets: [
+          'Numerical engine crunching aerodynamic wind deltas and battery voltage degradation across hundreds of thousands of telemetry points.',
+          'C# ASP.NET Core RESTful backend with Entity Framework Core and relational persistence modeling flight logs and drone configurations.',
+          'React + TypeScript + Electron desktop shell with automated CI/CD via GitHub Actions.',
+        ],
+        tags: ['C#', '.NET', 'TypeScript', 'SQL', 'CI/CD (GitHub Actions)'],
+      },
+      {
+        num: '09',
+        title: 'ALGORITHM VISUALIZER & VECTOR PLAYGROUND',
+        sub: 'Interactive CS & 3D Linear Algebra Educational Engines',
+        benchmark: '30+ Live Algorithms & 3D WebGL',
+        date: '2024 — 2025',
+        cat: 'fullstack',
+        github: 'https://github.com/Git-Aarya/AlgorithmVisualizer',
+        live: 'https://git-aarya.github.io/AlgorithmVisualizer/',
+        live2: 'https://git-aarya.github.io/VectorPlayground/',
+        desc: 'Two zero-dependency interactive web applications: step-by-step animation of 30+ sorting, graph, and DP algorithms, plus a real-time 3D vector mathematics sandbox.',
+        bullets: [
+          'AlgorithmVisualizer: 30+ sorting, graph traversal, dynamic programming, and backtracking algorithms with synchronized live code stepping.',
+          'VectorPlayground: Interactive 3D vector operations (cross product, projection, dependency graphs) rendered in real time.',
+        ],
+        tags: ['TypeScript', 'Data Structures & Algorithms', 'Linear Algebra'],
+      },
+    ];
+
+    /* ── DATA: SKILLS (Exact alignment with Resume + Quant specialization) ── */
+    const SKILL_CATEGORIES = [
+      {
+        title: 'Languages',
+        items: ['Python', 'SQL', 'Java', 'C++', 'C#', 'R', 'Bash', 'TypeScript', 'VBA'],
+      },
+      {
+        title: 'AI & Machine Learning',
+        items: ['PyTorch', 'LangChain', 'LLM Evaluation', 'Hugging Face Transformers', 'vLLM', 'Ollama', 'Scikit-learn', 'SHAP', 'SciPy'],
+      },
+      {
+        title: 'Data Engineering & BI',
+        items: ['PostgreSQL', 'SQL Server (SSMS)', 'Apache Spark / PySpark', 'Apache Kafka', 'Airflow', 'Polars', 'DuckDB', 'Pandas', 'Power BI', 'Tableau'],
+      },
+      {
+        title: 'Cloud & SDLC',
+        items: ['Microsoft Azure', 'AWS', '.NET', 'Docker', 'Kubernetes', 'FastAPI', 'Power Platform', 'Git', 'CI/CD (GitHub Actions)', 'pytest', 'Linux / Unix'],
+      },
+    ];
+
+    const MARQUEE_ITEMS = [
+      'Incoming Data Engineer Co-op @ Ericsson',
+      'AI Automation Engineer @ Mackenzie Investments',
+      'Quant Researcher @ UBC Trading Group',
+      'Founder @ StatGit (<45ms Agent Analytics)',
+      'vLLM Open Source Contributor (PR #43305)',
+      'Chronos C++ Order Book (<15μs Latency)',
+      'Aegis Distributed Analytics (10M+ Rows)',
+      'UBC Statistics & Computer Science',
+    ];
+
+    /* ── PROJECT ROW COMPONENT ── */
+    function ProjectRow({ proj, forceOpen, selectedSkill, onSelectSkill }) {
+      const [open, setOpen] = useState(proj.featured || false);
+
+      useEffect(() => {
+        if (forceOpen !== null) setOpen(forceOpen);
+      }, [forceOpen]);
+
+      const isHighlighted = selectedSkill && proj.tags.some(t => t.toLowerCase() === selectedSkill.toLowerCase());
+
+      return (
+        <div
+          className={`project-row${open ? ' open' : ''}${isHighlighted ? ' highlighted' : ''}`}
+          onClick={() => setOpen(o => !o)}
+        >
+          <div className="proj-idx">{proj.num}</div>
+          <div className="proj-main">
+            <div className="proj-top-line">
+              <h3 className="proj-title">{proj.title}</h3>
+              {proj.benchmark && <span className="proj-benchmark">{proj.benchmark}</span>}
+              {proj.featured && <span className="proj-featured-badge">Resume Highlight</span>}
             </div>
-          </FI>
-          <FI delay={180}>
-            <div>
-              <div className="currently">
-                <div className="curr-label">Live Status</div>
-                {currently.map(i => (
-                  <div key={i.k} className="curr-row">
-                    <span className="curr-k">{i.k}</span>
-                    <span className="curr-v">{i.v}</span>
-                  </div>
-                ))}
-              </div>
+            <div className="proj-sub">{proj.sub}</div>
+            <p className="proj-desc">{proj.desc}</p>
+            <div className="proj-expand">
+              <ul className="proj-bullets">
+                {proj.bullets.map((b, i) => <li key={i}>{b}</li>)}
+              </ul>
             </div>
-          </FI>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ── PROJECTS ── */
-const PROJECTS = [
-  {
-    num: '01', title: 'CREDIDRIFT', sub: 'Explainable Corporate Distress Forecasting',
-    date: 'April 2026 — Present', cat: 'quant', github: 'https://github.com/Git-Aarya',
-    desc: 'End-to-end credit distress forecasting pipeline combining alternative NLP datasets, XGBoost classification, and SHAP/LIME explainability — with distress probabilities translated into optimal portfolio weights via Black-Litterman.',
-    bullets: [
-      'Sourced alternative datasets by scraping SEC filings and earnings call transcripts with BeautifulSoup; applied FinBERT for executive sentiment extraction to identify novel predictors of business outcomes',
-      'Conducted rigorous statistical validation using statsmodels to evaluate residual plots and stationarity, then trained an XGBoost classifier to forecast credit downgrades',
-      'Unboxed non-linear predictions using SHAP and LIME to ensure feature logic aligned with economic intuition; translated distress probabilities into optimal portfolio weights via Black-Litterman with cvxpy',
-    ],
-    tags: ['Python', 'XGBoost', 'FinBERT', 'SHAP', 'LIME', 'cvxpy', 'Black-Litterman', 'BeautifulSoup', 'statsmodels'],
-  },
-  {
-    num: '02', title: 'AGRIHEDGE', sub: 'Weather Derivative Risk Engine',
-    date: 'April 2026', cat: 'quant', github: 'https://github.com/Git-Aarya',
-    desc: 'A high-performance C++ pricing engine for weather derivatives using Ornstein-Uhlenbeck stochastic processes, with a full React risk dashboard and Excel/VBA front-office add-in.',
-    bullets: [
-      'Parallelized Monte Carlo simulations in C++ pricing weather derivatives via O-U stochastic processes',
-      'Python + PostgreSQL backend ingesting live climate API data; R for statistical calibration of crop yield correlations',
-      'Omnichannel: interactive React dashboard + custom Excel/VBA add-in for front-office trading and market data capture',
-    ],
-    tags: ['C++', 'Python', 'R', 'React', 'PostgreSQL', 'Monte Carlo', 'VBA'],
-  },
-  {
-    num: '03', title: 'QUANTCOLLAB', sub: 'Enterprise Risk Reporting Portal',
-    date: 'Mar — Apr 2026', cat: 'fullstack', github: 'https://github.com/Git-Aarya',
-    desc: 'An enterprise SharePoint + Azure platform for quantitative research collaboration — secured with Entra ID SSO and a C# microservice polling legacy market feeds.',
-    bullets: [
-      'SPFx Web Part in React + TypeScript deployed to SharePoint for risk metric visualization',
-      'C# / ASP.NET Core microservice on Azure with PowerShell provisioning; MS SQL Server for risk data',
-      'OAuth/SSO via Microsoft Entra ID; jQuery + AJAX + JSON for asynchronous legacy feed ingestion',
-    ],
-    tags: ['React', 'TypeScript', 'C#', 'ASP.NET', 'Azure', 'SQL Server', 'OAuth'],
-  },
-  {
-    num: '04', title: 'AEROMETRIX', sub: 'Advanced Drone Telemetry Analyzer',
-    date: 'Mar 2026', cat: 'fullstack', github: 'https://github.com/Git-Aarya/AeroMetrix',
-    desc: 'A cross-platform desktop application ingesting, processing, and visualizing high-fidelity drone flight telemetry — bridging a Julia numerical engine, a C# ASP.NET Core API, and a React/Electron frontend.',
-    bullets: [
-      'Julia algorithmic engine (DataFrames.jl, CSV.jl) crunching aerodynamic wind deltas and battery voltage degradation across hundreds of thousands of matrix points',
-      'C# ASP.NET Core RESTful backend with Entity Framework Core and SQLite — modeling FlightLogs and DroneConfigurations with automated migrations',
-      'React + TypeScript + Electron desktop shell with Glassmorphism UI (MUI), TanStack Query for data fetching, and Recharts for multi-variable telemetry visualization',
-      'Full CI/CD pipeline via GitHub Actions; xUnit + Moq backend tests and Jest + React Testing Library frontend tests',
-    ],
-    tags: ['Julia', 'C#', 'ASP.NET Core', 'React', 'TypeScript', 'Electron', 'SQLite'],
-  },
-  {
-    num: '05', title: 'STATGIT', sub: 'Statistical Data Version Control',
-    date: 'Feb — Mar 2026', cat: 'mlops', github: 'https://github.com/Git-Aarya/statgit', live: 'https://statgit.com/',
-    desc: 'Zero-ETL Python CLI treating datasets as version-controlled states — detecting multivariate drift, scanning PII, and triggering MLOps remediation automatically.',
-    bullets: [
-      'Advanced drift detection: PSI, Jensen-Shannon Divergence, Earth Mover\'s Distance, Mahalanobis — numerical + categorical',
-      'Privacy-first: automated PII guardrails, differential privacy noise injection, SHA-256 statistical fingerprints',
-      'Direct cloud connectors to S3, GCS, Azure, Snowflake — compute pushed into warehouse, only metadata returns',
-    ],
-    tags: ['Python', 'Polars', 'AWS S3', 'SciPy', 'Snowflake', 'MLOps', 'CLI'],
-  },
-  {
-    num: '06', title: 'XAIQUANT', sub: 'Algorithmic Trading Backend',
-    date: 'Jul — Aug 2025', cat: 'quant', github: 'https://github.com/Git-Aarya/XAIQUANT',
-    desc: 'Low-latency FastAPI + PyTorch inference engine forecasting stock prices via LSTM with SHAP explainability on every prediction, containerized for Cloud Run.',
-    bullets: [
-      'FastAPI + PyTorch backend: LSTM time-series forecasting for real-time stock price prediction',
-      'NLU pipeline with SHAP explainability — every inference carries a full attribution breakdown',
-      'Docker-containerized execution deployed to Google Cloud Run; backtesting notebooks included',
-    ],
-    tags: ['PyTorch', 'FastAPI', 'SHAP', 'LSTM', 'Docker', 'React', 'GCP'],
-  },
-  {
-    num: '07', title: 'ALGORITHMVISUALIZER', sub: '30+ Algorithms, Animated',
-    date: '2024', cat: 'web', github: 'https://github.com/Git-Aarya/AlgorithmVisualizer', live: 'https://git-aarya.github.io/AlgorithmVisualizer/',
-    desc: 'Step-by-step animated visualization of 30+ algorithms — sorting, graph traversal, DP, backtracking — with live code display and zero build dependencies.',
-    bullets: [
-      '30+ algorithms: sorting, graph traversal, dynamic programming, backtracking — all animated',
-      'Play/pause, step forward/back, speed control; live code + pseudocode panel synchronized to animation',
-      'Zero dependencies — pure HTML, CSS, JavaScript + Tailwind via CDN',
-    ],
-    tags: ['JavaScript', 'HTML', 'CSS', 'Tailwind'],
-  },
-  {
-    num: '08', title: 'VECTORPLAYGROUND', sub: '3D Vector Mathematics',
-    date: '2024', cat: 'web', github: 'https://github.com/Git-Aarya/VectorPlayground', live: 'https://git-aarya.github.io/VectorPlayground/',
-    desc: 'Interactive 3D vector operations with drag-to-edit arrowheads, dynamic dependency graphs, and live readout of magnitude, angle, and dot products.',
-    bullets: [
-      'Drag vector arrowheads in real-time 3D; operations (cross product, projection, addition) update live',
-      'Dependency graph tracks which result vectors depend on which base vectors',
-      'Export/import scene as JSON; live magnitude, angle, and dot product readouts',
-    ],
-    tags: ['Three.js', 'JavaScript', 'HTML', 'CSS'],
-  },
-];
-
-function ProjectRow({ proj, idx }) {
-  const [open, setOpen] = useState(false);
-  return (
-    <FI delay={idx * 45}>
-      <div className={`project-row${open ? ' open' : ''}`} onClick={() => setOpen(o => !o)}>
-        <div className="proj-ghost">{proj.num}</div>
-        <div className="proj-idx">{proj.num}</div>
-        <div className="proj-main">
-          <div className="proj-title">{proj.title}</div>
-          <div className="proj-sub">{proj.sub}</div>
-          <div className="proj-desc">{proj.desc}</div>
-          <div className="proj-expand">
-            <ul className="proj-bullets">
-              {proj.bullets.map((b, i) => <li key={i}>{b}</li>)}
-            </ul>
-            <div className="proj-tags">
-              {proj.tags.map(t => <span key={t} className="proj-tag">{t}</span>)}
-            </div>
-          </div>
-        </div>
-        <div className="proj-side">
-          <div>
-            <div className="proj-date">{proj.date}</div>
-            <div className="proj-links" onClick={e => e.stopPropagation()}>
-              {proj.github && <a className="proj-link" href={proj.github} target="_blank" rel="noopener noreferrer">GitHub ↗</a>}
-              {proj.live   && <a className="proj-link" href={proj.live} target="_blank" rel="noopener noreferrer">Live ↗</a>}
-            </div>
-          </div>
-          <div className="proj-toggle">
-            <span className="proj-chevron">↓</span>
-            {open ? 'Collapse' : 'Details'}
-          </div>
-        </div>
-      </div>
-    </FI>
-  );
-}
-
-function Work() {
-  const [filter, setFilter] = useState('all');
-  const cats = [
-    { id: 'all', label: 'All' }, { id: 'quant', label: 'Quant' },
-    { id: 'mlops', label: 'MLOps' }, { id: 'fullstack', label: 'Full-Stack' }, { id: 'web', label: 'Web' },
-  ];
-  const filtered = filter === 'all' ? PROJECTS : PROJECTS.filter(p => p.cat === filter);
-  return (
-    <section id="work">
-      <div className="ghost-num">02</div>
-      <div className="wrap">
-        <FI>
-          <div className="work-head">
-            <div><span className="sec-label">02 — Selected Work</span><h2 className="sec-title">Projects</h2></div>
-            <div className="work-filters">
-              {cats.map(c => (
-                <button key={c.id} className={`wf${filter===c.id?' on':''}`} onClick={() => setFilter(c.id)}>{c.label}</button>
+            <div className="tag-row" onClick={e => e.stopPropagation()}>
+              {proj.tags.map(t => (
+                <button
+                  key={t}
+                  onClick={() => onSelectSkill(selectedSkill === t ? null : t)}
+                  className={`tech-tag${selectedSkill === t ? ' active' : ''}`}
+                >
+                  {t}
+                </button>
               ))}
             </div>
           </div>
-        </FI>
-        <div>{filtered.map((p, i) => <ProjectRow key={p.num} proj={p} idx={i} />)}</div>
-      </div>
-    </section>
-  );
-}
-
-/* ── EXPERIENCE ── */
-function Experience() {
-  const items = [
-    {
-      period: 'Feb 2026 — Present', org: 'UBC Trading Group\nVancouver, BC',
-      role: 'Quantitative Researcher',
-      bullets: [
-        'Leading SHAP integration into the backtest engine to map factor views and portfolio constraints to final asset weights via Black-Litterman and MOSEK optimization.',
-        'Architected a KernelSHAP approximation framework using custom Python wrappers to bypass the exponential time complexity of exact Shapley evaluations.',
-        'Engineered asset-level waterfall diagnostic plots empowering portfolio managers to quantify constraint friction and tune view confidence levels.',
-      ],
-      tags: ['Python', 'SHAP', 'Black-Litterman', 'MOSEK', 'Backtesting'],
-    },
-    {
-      period: 'Sept 2023 — Dec 2027', org: 'University of British Columbia\nVancouver, BC',
-      role: 'BSc Statistics · Thematic CS',
-      bullets: [
-        'Pursuing a Bachelor of Science in Statistics with a thematic concentration in Computer Science. Expected graduation December 2027.',
-        'Coursework spanning statistical inference, machine learning, data structures, algorithms, and numerical methods.',
-      ],
-      tags: ['Statistics', 'Computer Science', 'Machine Learning', 'Algorithms'],
-    },
-  ];
-  return (
-    <section id="experience">
-      <div className="ghost-num">03</div>
-      <div className="wrap">
-        <FI><span className="sec-label">03 — Experience</span><h2 className="sec-title">Where I've Worked</h2></FI>
-        <div className="exp-list">
-          {items.map((item, i) => (
-            <FI key={i} delay={i * 80}>
-              <div className="exp-item">
-                <div className="exp-left">
-                  <div className="exp-period">{item.period}</div>
-                  {item.org.split('\n').map((l, j) => <div key={j} className="exp-org">{l}</div>)}
-                </div>
-                <div className="exp-right">
-                  <div className="exp-role">{item.role}</div>
-                  <ul className="exp-bullets">{item.bullets.map((b, j) => <li key={j}>{b}</li>)}</ul>
-                  <div className="exp-tags">{item.tags.map(t => <span key={t} className="exp-tag">{t}</span>)}</div>
-                </div>
+          <div className="proj-side">
+            <div>
+              <div className="proj-date">{proj.date}</div>
+              <div className="proj-links" onClick={e => e.stopPropagation()}>
+                {proj.github && (
+                  <a className="proj-link" href={proj.github} target="_blank" rel="noopener noreferrer">
+                    {proj.github.includes('/pull/') ? 'PR #43305 ↗' : 'GitHub ↗'}
+                  </a>
+                )}
+                {proj.live && (
+                  <a className="proj-link" href={proj.live} target="_blank" rel="noopener noreferrer">
+                    Live ↗
+                  </a>
+                )}
+                {proj.live2 && (
+                  <a className="proj-link" href={proj.live2} target="_blank" rel="noopener noreferrer">
+                    3D Demo ↗
+                  </a>
+                )}
               </div>
-            </FI>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ── SKILLS (typographic flow, no pill boxes) ── */
-const SKILL_CATS = [
-  { title: 'Languages', items: ['C++', 'Python', 'R', 'Julia', 'TypeScript', 'JavaScript', 'Java', 'SQL', 'C#', 'Bash', 'VBA', 'PowerShell'] },
-  { title: 'ML & Data Science', items: ['PyTorch', 'TensorFlow', 'Keras', 'Scikit-learn', 'XGBoost', 'FinBERT', 'SHAP', 'LIME', 'NumPy', 'Pandas', 'Polars', 'SciPy', 'statsmodels', 'Apache Spark'] },
-  { title: 'Infrastructure & Cloud', items: ['Docker', 'Kubernetes', 'Microsoft Azure', 'AWS S3', 'GCS', 'Snowflake', 'PostgreSQL', 'MS SQL Server', 'SQLite', 'Neo4j', 'Linux', 'CI/CD'] },
-  { title: 'Web & Frameworks', items: ['React', 'Electron', 'FastAPI', 'ASP.NET Core', 'SharePoint SPFx', 'Three.js', 'TanStack Query', 'Recharts', 'jQuery', 'HTML/CSS'] },
-  { title: 'Quant & Finance', items: ['Black-Litterman', 'MOSEK', 'cvxpy', 'Monte Carlo', 'Ornstein-Uhlenbeck', 'Statistical Arbitrage', 'Options Pricing', 'Backtesting', 'SHAP / XAI', 'Credit Distress Modelling'] },
-  { title: 'Tools', items: ['Git / GitHub', 'BeautifulSoup', 'MS Excel', 'PowerShell', 'Microsoft Entra ID', 'BigQuery', 'SharePoint'] },
-];
-
-function Skills() {
-  return (
-    <section id="skills">
-      <div className="ghost-num">04</div>
-      <div className="wrap">
-        <FI><span className="sec-label">04 — Expertise</span><h2 className="sec-title">Skills</h2></FI>
-        <div className="skills-body" style={{marginTop:72}}>
-          {SKILL_CATS.map((cat, i) => (
-            <FI key={cat.title} delay={i * 55}>
-              <div className="skill-cat">
-                <div className="sk-title">{cat.title}</div>
-                <div className="sk-flow">
-                  {cat.items.map((item, j) => (
-                    <React.Fragment key={item}>
-                      <span className="sk-word">{item}</span>
-                      {j < cat.items.length - 1 && <span className="sk-sep"> · </span>}
-                    </React.Fragment>
-                  ))}
-                </div>
-              </div>
-            </FI>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ── CONTACT ── */
-function Contact() {
-  return (
-    <section id="contact">
-      <div className="ghost-num">05</div>
-      <div className="wrap">
-        <FI>
-          <div className="contact-big">
-            Have a hard problem?<br/>
-            <em>Let's build.</em>
-          </div>
-        </FI>
-        <div className="contact-grid">
-          <FI delay={80}>
-            <p className="contact-sub">
-              Open to <em>co-op opportunities</em>, research collaborations,
-              and ambitious problems at the intersection of statistics,
-              systems, and finance.
-            </p>
-          </FI>
-          <FI delay={160}>
-            <div className="contact-links">
-              <a className="c-link" href="https://github.com/Git-Aarya" target="_blank" rel="noopener noreferrer">
-                <div className="c-inner"><span className="c-type">GitHub</span><span className="c-val">Git-Aarya</span></div>
-                <span className="c-arr">↗</span>
-              </a>
-              <a className="c-link" href="https://www.linkedin.com/in/aarya-chaurasia/" onClick={e => { e.preventDefault(); window.open('https://www.linkedin.com/in/aarya-chaurasia/', '_blank', 'noopener,noreferrer'); }}>
-                <div className="c-inner"><span className="c-type">LinkedIn</span><span className="c-val">aarya-chaurasia</span></div>
-                <span className="c-arr">↗</span>
-              </a>
             </div>
-          </FI>
+            <div className="proj-toggle">
+              <span className="proj-chevron">↓</span>
+              {open ? 'Hide Details' : 'Architecture'}
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
-  );
-}
+      );
+    }
 
-/* ── APP ── */
-function App() {
-  return (
-    <>
-      <Hero />
-      <Marquee />
-      <About />
-      <Work />
-      <Experience />
-      <Skills />
-      <Contact />
-      <footer>
-        <span className="foot-l">Aarya Chaurasia · 2026</span>
-        <span className="foot-r">BSc Statistics · UBC · Vancouver, BC</span>
-      </footer>
-    </>
-  );
-}
-ReactDOM.createRoot(document.getElementById('root')).render(<App />);
-</script>
+    /* ── RESUME MODAL COMPONENT ── */
+    function ResumeModal({ onClose, showToast }) {
+      useEffect(() => {
+        const onKey = e => { if (e.key === 'Escape') onClose(); };
+        window.addEventListener('keydown', onKey);
+        return () => window.removeEventListener('keydown', onKey);
+      }, [onClose]);
+
+      const handleCopyLatex = () => {
+        copyToClipboard(LATEX_RESUME, () => showToast('Copied Single-Page LaTeX Resume Source'));
+      };
+
+      return (
+        <div className="modal-backdrop" onClick={onClose}>
+          <div className="resume-modal" onClick={e => e.stopPropagation()}>
+            <div className="resume-modal-bar">
+              <span className="resume-modal-title">⊙ Aarya Chaurasia — Single-Page Resume</span>
+              <div className="resume-modal-actions">
+                <button className="rm-btn" onClick={handleCopyLatex}>Copy LaTeX Source</button>
+                <button className="rm-btn primary" onClick={() => window.print()}>Print / Save PDF</button>
+                <button className="rm-btn" onClick={onClose}>Close ✕</button>
+              </div>
+            </div>
+            <div className="resume-paper-scroll">
+              <div className="resume-sheet">
+                <div className="rs-header">
+                  <div className="rs-name">Aarya Chaurasia</div>
+                  <div className="rs-contact">
+                    Vancouver, BC, Canada &nbsp;|&nbsp;{' '}
+                    <a href="mailto:aarya09@gmail.com">aarya09@gmail.com</a> &nbsp;|&nbsp;{' '}
+                    <a href="https://github.com/Git-Aarya" target="_blank" rel="noopener noreferrer">github.com/Git-Aarya</a> &nbsp;|&nbsp;{' '}
+                    <a href="https://linkedin.com/in/aarya-chaurasia" target="_blank" rel="noopener noreferrer">linkedin.com/in/aarya-chaurasia/</a>
+                  </div>
+                </div>
+
+                <div className="rs-sec-title">Education</div>
+                <div className="rs-entry">
+                  <div className="rs-row">
+                    <span className="rs-org">University of British Columbia</span>
+                    <span>Vancouver, BC</span>
+                  </div>
+                  <div className="rs-row">
+                    <span className="rs-role">Bachelor of Science in Statistics, Computer Science Concentration</span>
+                    <span>Sept 2023 – May 2028</span>
+                  </div>
+                  <ul className="rs-list">
+                    <li><strong>Relevant Coursework:</strong> Data Structures & Algorithms, Databases, Software Construction, Machine Learning, Statistical Inference, Linear Algebra.</li>
+                  </ul>
+                </div>
+
+                <div className="rs-sec-title">Technical Skills</div>
+                <ul className="rs-list">
+                  <li><strong>Languages:</strong> Python, SQL, Java, C++, C#, R, Bash, TypeScript, VBA</li>
+                  <li><strong>AI & Machine Learning:</strong> PyTorch, LangChain, LLM Evaluation, Hugging Face Transformers, vLLM, Ollama, Scikit-learn, SHAP, SciPy</li>
+                  <li><strong>Data Engineering & BI:</strong> PostgreSQL, SQL Server (SSMS), Apache Spark / PySpark, Apache Kafka, Airflow, Polars, DuckDB, Pandas, Power BI, Tableau</li>
+                  <li><strong>Cloud & SDLC:</strong> Microsoft Azure, AWS, .NET, Docker, Kubernetes, FastAPI, Power Platform, Git, CI/CD (GitHub Actions), pytest, Linux / Unix</li>
+                </ul>
+
+                <div className="rs-sec-title">Experience</div>
+                <div className="rs-entry">
+                  <div className="rs-row">
+                    <span className="rs-org">Ericsson</span>
+                    <span>Ottawa, ON</span>
+                  </div>
+                  <div className="rs-row">
+                    <span className="rs-role">Incoming Data Engineer Co-op (8-Month Co-op Term)</span>
+                    <span>Jan 2027 – Aug 2027</span>
+                  </div>
+                  <ul className="rs-list">
+                    <li>Will engineer and maintain scalable ETL pipelines in <strong>Java</strong>, <strong>C# (.NET)</strong>, and <strong>SQL Server</strong> to extract, standardize, and deliver multi-source telemetry across code builds, automated test tracing, defect tracking, and product delivery systems.</li>
+                    <li>Will design business analytics software and data warehouse schemas on large-scale telecommunications datasets within an <strong>Agile</strong> engineering workflow.</li>
+                  </ul>
+                </div>
+
+                <div className="rs-entry">
+                  <div className="rs-row">
+                    <span className="rs-org">Mackenzie Investments</span>
+                    <span>Toronto, ON</span>
+                  </div>
+                  <div className="rs-row">
+                    <span className="rs-role">AI Automation Engineer Intern, Trust Accounting Team</span>
+                    <span>Sept 2026 – Dec 2026</span>
+                  </div>
+                  <ul className="rs-list">
+                    <li>Engineering <strong>11</strong> automated ETL pipelines (<strong>8 in production</strong>, <strong>3 in UAT/dev</strong>) on <strong>Microsoft Azure</strong> using <strong>Python</strong> (<strong>pandas</strong>), <strong>Power Query</strong>, <strong>Excel VBA</strong>, and <strong>Power Automate</strong>, processing <strong>1,000s of rows weekly</strong> and on track to save <strong>~100 hours/week</strong> by term end.</li>
+                    <li>Architected a centralized governance portal using a <strong>Power Apps</strong> frontend and interactive <strong>Power BI</strong> dashboards for the <strong>30-person</strong> Trust Accounting team to track AI-enabled workflows, manage multi-stage approvals, and enforce audit compliance.</li>
+                    <li>Partnering with technical and business stakeholders across the <strong>30-member</strong> division to eliminate manual reconciliation bottlenecks and scale enterprise automation workflows.</li>
+                  </ul>
+                </div>
+
+                <div className="rs-entry">
+                  <div className="rs-row">
+                    <span className="rs-org">UBC Trading Group (UBCTG)</span>
+                    <span>Vancouver, BC</span>
+                  </div>
+                  <div className="rs-row">
+                    <span className="rs-role">Quantitative Researcher, Portfolio Construction Team</span>
+                    <span>Feb 2026 – Present</span>
+                  </div>
+                  <ul className="rs-list">
+                    <li>Leading <strong>SHAP</strong> integration into the backtest engine, attributing final asset weights to factor views and portfolio constraints across a <strong>Black-Litterman</strong> and <strong>MOSEK</strong> optimization pipeline.</li>
+                    <li>Built a <strong>KernelSHAP</strong> approximation framework in <strong>Python</strong> using custom model wrappers to systematically mask inputs, cutting attribution runtime from exponential to <strong>12 seconds</strong> per rebalance.</li>
+                    <li>Shipped asset-level waterfall and constraint-friction visualizations used by portfolio managers to quantify constraint cost and tune view confidence levels.</li>
+                  </ul>
+                </div>
+
+                <div className="rs-entry">
+                  <div className="rs-row">
+                    <span className="rs-org">StatGit</span>
+                    <span>Vancouver, BC</span>
+                  </div>
+                  <div className="rs-row">
+                    <span className="rs-role">Founder & AI Systems Engineer</span>
+                    <span>Jan 2026 – Aug 2026</span>
+                  </div>
+                  <ul className="rs-list">
+                    <li>Architected a local-first behavioral version control system for AI agents, including a zero-telemetry "LLM-as-a-Judge" evaluation pipeline on <strong>Ollama</strong> that scores agent traces for goal alignment.</li>
+                    <li>Built the analytics backend in <strong>FastAPI</strong>, <strong>DuckDB</strong>, and <strong>Polars</strong>, computing Decision Path Entropy and a Tool-Use Efficiency Index (TUEI) over <strong>10,000+</strong> agent traces in under <strong>45 ms</strong>.</li>
+                    <li>Secured Letters of Intent from <strong>2</strong> B2B design partners to pilot the platform, validating demand for agent observability tooling.</li>
+                  </ul>
+                </div>
+
+                <div className="rs-sec-title">Technical Projects</div>
+                <div className="rs-entry">
+                  <div className="rs-row">
+                    <span><strong>Open Source Contributor – vLLM</strong> | <em>Python, Hugging Face Transformers, pytest, CI/CD</em></span>
+                    <span>May 2026 – Aug 2026</span>
+                  </div>
+                  <ul className="rs-list">
+                    <li>Authored <code>resolve_text_config</code>, a recursive configuration parser that resolves nested config errors in <strong>vLLM</strong>, preventing recursive model initialization failures and restoring <strong>Tarsier2</strong> support on Hugging Face Transformers v5. <em>(<a href="https://github.com/vllm-project/vllm/pull/43305" target="_blank" rel="noopener noreferrer">PR #43305</a>)</em></li>
+                    <li>Covered flat and deeply nested config paths with offline unit tests, clearing <strong>ruff</strong> and <strong>pre-commit</strong> CI gates to prevent upstream regressions.</li>
+                  </ul>
+                </div>
+
+                <div className="rs-entry">
+                  <div className="rs-row">
+                    <span><strong>Chronos – Low-Latency Limit Order Book</strong> | <em>C++, Linux, Bash, Data Structures</em></span>
+                    <span>Apr 2026 – Jun 2026</span>
+                  </div>
+                  <ul className="rs-list">
+                    <li>Engineered an object-oriented matching engine in <strong>C++</strong> on <strong>Linux</strong> simulating electronic trading venues, sustaining order-to-execution latency under <strong>15 μs</strong>.</li>
+                    <li>Implemented lock-free data structures and custom memory pooling to achieve <strong>O(1)</strong> limit order insertion, matching, and cancellation, benchmarked at <strong>125,000 orders/sec</strong> under replayed market load.</li>
+                    <li>Automated build pipelines and unit test environments with <strong>Bash</strong>, ensuring reliability across high-throughput simulation runs.</li>
+                  </ul>
+                </div>
+
+                <div className="rs-entry">
+                  <div className="rs-row">
+                    <span><strong>Aegis – Distributed Market Analytics Platform</strong> | <em>Java, PostgreSQL, SQL, Windows/Unix</em></span>
+                    <span>Jan 2026 – Mar 2026</span>
+                  </div>
+                  <ul className="rs-list">
+                    <li>Built an enterprise financial analytics application in <strong>Java</strong> and <strong>PostgreSQL</strong> that ingests high-volume market feeds and validates business rules dynamically at write time.</li>
+                    <li>Designed indexed <strong>SQL</strong> schemas and analytical queries to detect algorithmic pricing anomalies across <strong>10,000,000+ rows</strong>, deployed as a hybrid service across <strong>Windows</strong> and <strong>Unix</strong> servers.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    /* ── COMMAND PALETTE MODAL ── */
+    function CommandPalette({ onClose, onOpenResume, showToast }) {
+      const [q, setQ] = useState('');
+      const inputRef = useRef();
+
+      useEffect(() => {
+        if (inputRef.current) inputRef.current.focus();
+        const onKey = e => { if (e.key === 'Escape') onClose(); };
+        window.addEventListener('keydown', onKey);
+        return () => window.removeEventListener('keydown', onKey);
+      }, [onClose]);
+
+      const actions = [
+        { label: 'View Formatted Resume / Print PDF', cat: 'Resume', run: () => { onClose(); onOpenResume(); } },
+        { label: 'Copy Email (aarya09@gmail.com)', cat: 'Contact', run: () => { copyToClipboard('aarya09@gmail.com', () => showToast('Copied Email: aarya09@gmail.com')); onClose(); } },
+        { label: 'Copy LaTeX Resume Code', cat: 'Resume', run: () => { copyToClipboard(LATEX_RESUME, () => showToast('Copied LaTeX Resume Code')); onClose(); } },
+        { label: 'Jump to 01 — Experience (Ericsson, Mackenzie, UBCTG, StatGit)', cat: 'Navigate', run: () => { onClose(); location.hash = '#experience'; } },
+        { label: 'Jump to 02 — Technical Projects (vLLM, Chronos, Aegis)', cat: 'Navigate', run: () => { onClose(); location.hash = '#work'; } },
+        { label: 'Jump to 03 — Technical Skills Arsenal', cat: 'Navigate', run: () => { onClose(); location.hash = '#skills'; } },
+        { label: 'Jump to 04 — Education & About (UBC Stats + CS)', cat: 'Navigate', run: () => { onClose(); location.hash = '#about'; } },
+        { label: 'Open vLLM Merged Pull Request (#43305)', cat: 'External', run: () => { window.open('https://github.com/vllm-project/vllm/pull/43305', '_blank'); onClose(); } },
+        { label: 'Open GitHub Profile (github.com/Git-Aarya)', cat: 'External', run: () => { window.open('https://github.com/Git-Aarya', '_blank'); onClose(); } },
+        { label: 'Open LinkedIn (linkedin.com/in/aarya-chaurasia)', cat: 'External', run: () => { window.open('https://www.linkedin.com/in/aarya-chaurasia/', '_blank'); onClose(); } },
+        { label: 'Open StatGit Live Platform (statgit.com)', cat: 'External', run: () => { window.open('https://statgit.com/', '_blank'); onClose(); } },
+        { label: 'Toggle Visual Theme Tweaks Panel', cat: 'Settings', run: () => { document.getElementById('tweaks-panel').classList.toggle('on'); onClose(); } },
+      ];
+
+      const filtered = actions.filter(a =>
+        a.label.toLowerCase().includes(q.toLowerCase()) ||
+        a.cat.toLowerCase().includes(q.toLowerCase())
+      );
+
+      return (
+        <div className="modal-backdrop" onClick={onClose}>
+          <div className="cmd-modal" onClick={e => e.stopPropagation()}>
+            <div className="cmd-input-wrap">
+              <span style={{ color: 'var(--signal)', fontFamily: 'var(--fn-mono)', fontSize: 13 }}>⌘</span>
+              <input
+                ref={inputRef}
+                className="cmd-input"
+                placeholder="Type a command or search (e.g. Resume, Email, vLLM, Ericsson)..."
+                value={q}
+                onChange={e => setQ(e.target.value)}
+              />
+              <button
+                onClick={onClose}
+                style={{ background: 'none', border: 'none', color: 'var(--muted)', fontFamily: 'var(--fn-mono)', fontSize: 10 }}
+              >
+                ESC
+              </button>
+            </div>
+            <div className="cmd-list">
+              {filtered.map((item, i) => (
+                <button key={i} className="cmd-item" onClick={item.run}>
+                  <span>{item.label}</span>
+                  <span className="cmd-item-cat">{item.cat}</span>
+                </button>
+              ))}
+              {filtered.length === 0 && (
+                <div style={{ padding: 20, textAlign: 'center', fontFamily: 'var(--fn-mono)', fontSize: 11, color: 'var(--muted)' }}>
+                  No matching commands.
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    /* ── MAIN APPLICATION ── */
+    function App() {
+      const [mobMenuOpen, setMobMenuOpen] = useState(false);
+      const [resumeOpen, setResumeOpen] = useState(false);
+      const [cmdOpen, setCmdOpen] = useState(false);
+      const [toast, setToast] = useState(null);
+
+      const [projFilter, setProjFilter] = useState('all');
+      const [projSearch, setProjSearch] = useState('');
+      const [forceExpandAll, setForceExpandAll] = useState(null);
+      const [selectedSkill, setSelectedSkill] = useState(null);
+
+      const triggerToast = (msg) => {
+        setToast(msg);
+        setTimeout(() => setToast(null), 2800);
+      };
+
+      useEffect(() => {
+        const onKeyDown = (e) => {
+          if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+            e.preventDefault();
+            setCmdOpen(o => !o);
+          }
+        };
+        window.addEventListener('keydown', onKeyDown);
+        return () => window.removeEventListener('keydown', onKeyDown);
+      }, []);
+
+      const filteredProjects = useMemo(() => {
+        return PROJECTS.filter(p => {
+          const matchesCat = projFilter === 'all' || p.cat === projFilter;
+          const q = projSearch.trim().toLowerCase();
+          const matchesQuery = !q ||
+            p.title.toLowerCase().includes(q) ||
+            p.sub.toLowerCase().includes(q) ||
+            p.desc.toLowerCase().includes(q) ||
+            p.tags.some(t => t.toLowerCase().includes(q));
+          return matchesCat && matchesQuery;
+        });
+      }, [projFilter, projSearch]);
+
+      const copyEmail = () => copyToClipboard('aarya09@gmail.com', () => triggerToast('Copied aarya09@gmail.com to clipboard'));
+
+      return (
+        <>
+          {/* ── NAVIGATION ── */}
+          <header className="site-nav">
+            <a href="#hero" className="nav-brand" onClick={() => setMobMenuOpen(false)}>
+              <div className="nav-monogram">AC</div>
+              <span className="nav-name">Aarya Chaurasia</span>
+            </a>
+
+            <ul className="nav-center">
+              <li><a href="#experience">01. Experience</a></li>
+              <li><a href="#work">02. Projects</a></li>
+              <li><a href="#skills">03. Skills</a></li>
+              <li><a href="#about">04. Education</a></li>
+              <li><a href="#contact">05. Contact</a></li>
+            </ul>
+
+            <div className="nav-actions">
+              <button className="cmd-btn" onClick={() => setCmdOpen(true)} title="Open Command Palette">
+                <span>Quick Jump</span>
+                <span className="cmd-kbd">⌘K</span>
+              </button>
+              <button className="resume-nav-btn" onClick={() => setResumeOpen(true)}>
+                <span>Resume</span>
+                <span className="hide-xs">↗</span>
+              </button>
+              <button
+                className="mob-menu-btn"
+                onClick={() => setMobMenuOpen(o => !o)}
+                aria-label="Toggle Menu"
+              >
+                {mobMenuOpen ? '✕' : '☰'}
+              </button>
+            </div>
+          </header>
+
+          {/* ── MOBILE DRAWER ── */}
+          <div className={`mob-drawer${mobMenuOpen ? ' open' : ''}`}>
+            <ul className="mob-links">
+              <li><a href="#experience" onClick={() => setMobMenuOpen(false)}>Experience <span>01</span></a></li>
+              <li><a href="#work" onClick={() => setMobMenuOpen(false)}>Projects <span>02</span></a></li>
+              <li><a href="#skills" onClick={() => setMobMenuOpen(false)}>Technical Skills <span>03</span></a></li>
+              <li><a href="#about" onClick={() => setMobMenuOpen(false)}>About & UBC <span>04</span></a></li>
+              <li><a href="#contact" onClick={() => setMobMenuOpen(false)}>Contact <span>05</span></a></li>
+            </ul>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+              <button
+                className="btn-primary"
+                style={{ width: '100%', justifyContent: 'center' }}
+                onClick={() => { setMobMenuOpen(false); setResumeOpen(true); }}
+              >
+                View / Print Full Resume
+              </button>
+              <button
+                className="btn-secondary"
+                style={{ width: '100%', justifyContent: 'center' }}
+                onClick={() => { setMobMenuOpen(false); copyEmail(); }}
+              >
+                Copy Email: aarya09@gmail.com
+              </button>
+            </div>
+          </div>
+
+          {/* ── HERO SECTION ── */}
+          <section id="hero">
+            <HeroCanvas />
+            <div className="hero-top-bar">
+              <div className="status-pill">
+                <span className="status-dot"></span>
+                <span>Incoming Data Engineer Co-op @ Ericsson (Jan 2027) · Open to Fall 2027 Co-ops</span>
+              </div>
+              <div className="hero-top-right">
+                <div>Vancouver, BC &amp; Toronto, ON</div>
+                <div>UBC BSc Statistics + Computer Science</div>
+              </div>
+            </div>
+
+            <div className="hero-main">
+              <div className="hero-eyebrow">
+                <span>Data Engineering</span>
+                <span>·</span>
+                <span>AI &amp; LLM Infrastructure</span>
+                <span>·</span>
+                <span>Quantitative Systems</span>
+              </div>
+              <div className="hero-name-wrap">
+                <span className="hero-line hero-line-1">AARYA</span>
+                <span className="hero-line hero-line-2">
+                  CHAU<span className="outline-signal">RA</span>SIA
+                </span>
+              </div>
+              <div className="hero-role-tags">
+                <span className="role-chip">Incoming Data Engineer @ <strong>Ericsson</strong></span>
+                <span className="role-chip">AI Automation Engineer @ <strong>Mackenzie Investments</strong></span>
+                <span className="role-chip">Quant Researcher @ <strong>UBC Trading Group</strong></span>
+                <span className="role-chip">Founder @ <strong>StatGit</strong></span>
+              </div>
+            </div>
+
+            <div className="hero-bottom">
+              <p className="hero-desc">
+                Engineering <em>high-throughput data pipelines</em>, <em>low-latency C++ &amp; Java systems</em>,
+                and <em>explainable ML/quant infrastructure</em> built for production scale.
+              </p>
+              <div className="hero-cta-cluster">
+                <div className="hero-btns">
+                  <a href="#experience" className="btn-primary">Explore Experience ↓</a>
+                  <a href="#work" className="btn-secondary">Featured Systems</a>
+                  <button className="btn-secondary" onClick={() => setResumeOpen(true)}>Interactive Resume</button>
+                </div>
+                <div className="quick-socials">
+                  <button className="social-pill" onClick={copyEmail}>✉ aarya09@gmail.com (Copy)</button>
+                  <a className="social-pill" href="https://github.com/Git-Aarya" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+                  <a className="social-pill" href="https://www.linkedin.com/in/aarya-chaurasia/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+                  <a className="social-pill" href="https://github.com/vllm-project/vllm/pull/43305" target="_blank" rel="noopener noreferrer">vLLM PR #43305 ↗</a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* ── HIGH-IMPACT RECRUITER METRICS BAR ── */}
+          <div className="metrics-strip">
+            <div className="metrics-grid">
+              <div className="metric-cell">
+                <div className="metric-val">~100 <span>hrs/wk</span></div>
+                <div className="metric-lbl">Saved via 11 Automated Azure &amp; Python ETL Pipelines (8 Prod, 3 UAT)</div>
+                <div className="metric-tag">Mackenzie Investments</div>
+              </div>
+              <div className="metric-cell">
+                <div className="metric-val">&lt; 15 <span>μs</span></div>
+                <div className="metric-lbl">Order-to-Execution Latency in C++ Limit Order Book at 125K orders/sec</div>
+                <div className="metric-tag">Chronos Matching Engine</div>
+              </div>
+              <div className="metric-cell">
+                <div className="metric-val">12 <span>sec</span></div>
+                <div className="metric-lbl">Black-Litterman &amp; MOSEK Portfolio Attribution via Custom KernelSHAP</div>
+                <div className="metric-tag">UBC Trading Group</div>
+              </div>
+              <div className="metric-cell">
+                <div className="metric-val">&lt; 45 <span>ms</span></div>
+                <div className="metric-lbl">Decision Path Entropy &amp; TUEI Analytics over 10,000+ AI Agent Traces</div>
+                <div className="metric-tag">StatGit · 2 B2B LOIs</div>
+              </div>
+              <div className="metric-cell">
+                <div className="metric-val">PR <span>#43305</span></div>
+                <div className="metric-lbl">Merged Recursive Config Parser Restoring Tarsier2 on HF Transformers v5</div>
+                <div className="metric-tag">vLLM Open Source</div>
+              </div>
+            </div>
+          </div>
+
+          {/* ── MARQUEE ── */}
+          <div className="marquee-strip">
+            <div className="marquee-inner">
+              {[...MARQUEE_ITEMS, ...MARQUEE_ITEMS].map((item, idx) => (
+                <div key={idx} className="marquee-item">
+                  <span className="marquee-dot"></span>
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* ── 01: EXPERIENCE SECTION ── */}
+          <section id="experience">
+            <div className="ghost-num">01</div>
+            <div className="wrap">
+              <FI>
+                <div className="sec-head">
+                  <div>
+                    <span className="sec-label">01 — Industry &amp; Research Track Record</span>
+                    <h2 className="sec-title">Experience</h2>
+                  </div>
+                  <button className="btn-secondary" onClick={() => setResumeOpen(true)}>
+                    Open Full 1-Page Resume ↗
+                  </button>
+                </div>
+              </FI>
+
+              {selectedSkill && (
+                <div className="skill-filter-banner">
+                  <span>Highlighting roles &amp; projects using: <strong style={{ color: 'var(--signal)' }}>{selectedSkill}</strong></span>
+                  <button onClick={() => setSelectedSkill(null)}>Clear Filter ✕</button>
+                </div>
+              )}
+
+              <div className="exp-timeline">
+                {EXPERIENCES.map((exp, idx) => {
+                  const isHighlighted = selectedSkill && exp.tags.some(t => t.toLowerCase() === selectedSkill.toLowerCase());
+                  return (
+                    <FI key={exp.id} delay={idx * 60}>
+                      <div className={`exp-card${isHighlighted ? ' highlighted' : ''}`}>
+                        <div className="exp-meta">
+                          <div className="exp-period">{exp.period}</div>
+                          <div className="exp-company">{exp.company}</div>
+                          <div className="exp-loc">{exp.location}</div>
+                          <span className="exp-badge">{exp.badge}</span>
+                          {exp.links && (
+                            <div className="exp-ext-links">
+                              {exp.links.map(l => (
+                                <a key={l.url} href={l.url} target="_blank" rel="noopener noreferrer" className="exp-ext-link">
+                                  {l.label}
+                                </a>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                        <div className="exp-content">
+                          <div className="exp-role-header">
+                            <h3 className="exp-role">{exp.role}</h3>
+                            <span className="exp-impact-pill">{exp.impact}</span>
+                          </div>
+                          <ul className="exp-bullets">
+                            {exp.bullets.map((b, i) => <li key={i}>{b}</li>)}
+                          </ul>
+                          <div className="tag-row">
+                            {exp.tags.map(t => (
+                              <button
+                                key={t}
+                                onClick={() => setSelectedSkill(selectedSkill === t ? null : t)}
+                                className={`tech-tag${selectedSkill === t ? ' active' : ''}`}
+                              >
+                                {t}
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </FI>
+                  );
+                })}
+              </div>
+            </div>
+          </section>
+
+          {/* ── 02: PROJECTS SECTION ── */}
+          <section id="work">
+            <div className="ghost-num">02</div>
+            <div className="wrap">
+              <FI>
+                <div className="sec-head" style={{ marginBottom: 36 }}>
+                  <div>
+                    <span className="sec-label">02 — Open Source &amp; Systems Architecture</span>
+                    <h2 className="sec-title">Selected Work</h2>
+                  </div>
+                </div>
+              </FI>
+
+              <FI delay={60}>
+                <div className="work-controls">
+                  <div className="work-filters">
+                    {[
+                      { id: 'all', label: 'All Systems (9)' },
+                      { id: 'systems', label: 'Low-Latency & Distributed' },
+                      { id: 'ai', label: 'AI & Open Source' },
+                      { id: 'quant', label: 'Quant & Finance' },
+                      { id: 'fullstack', label: 'Full-Stack & Web' },
+                    ].map(c => (
+                      <button
+                        key={c.id}
+                        className={`wf${projFilter === c.id ? ' on' : ''}`}
+                        onClick={() => setProjFilter(c.id)}
+                      >
+                        {c.label}
+                      </button>
+                    ))}
+                  </div>
+                  <div className="work-search-wrap">
+                    <input
+                      type="text"
+                      className="work-search"
+                      placeholder="Filter by stack (e.g. C++, vLLM, SQL)..."
+                      value={projSearch}
+                      onChange={e => setProjSearch(e.target.value)}
+                    />
+                    <button
+                      className="expand-all-btn"
+                      onClick={() => setForceExpandAll(prev => prev === true ? false : true)}
+                    >
+                      {forceExpandAll ? 'Collapse All' : 'Expand All'}
+                    </button>
+                  </div>
+                </div>
+              </FI>
+
+              <div className="project-list">
+                {filteredProjects.map((proj) => (
+                  <ProjectRow
+                    key={proj.num}
+                    proj={proj}
+                    forceOpen={forceExpandAll}
+                    selectedSkill={selectedSkill}
+                    onSelectSkill={setSelectedSkill}
+                  />
+                ))}
+                {filteredProjects.length === 0 && (
+                  <div style={{ padding: '48px 0', textAlign: 'center', fontFamily: 'var(--fn-mono)', fontSize: 12, color: 'var(--muted)' }}>
+                    No projects match "{projSearch}".{' '}
+                    <button
+                      onClick={() => { setProjFilter('all'); setProjSearch(''); }}
+                      style={{ color: 'var(--signal)', background: 'none', border: 'none', textDecoration: 'underline' }}
+                    >
+                      Reset filters
+                    </button>
+                  </div>
+                )}
+              </div>
+            </div>
+          </section>
+
+          {/* ── 03: TECHNICAL SKILLS MATRIX ── */}
+          <section id="skills">
+            <div className="ghost-num">03</div>
+            <div className="wrap">
+              <FI>
+                <div className="sec-head">
+                  <div>
+                    <span className="sec-label">03 — Technical Arsenal</span>
+                    <h2 className="sec-title">Skills &amp; Stack</h2>
+                  </div>
+                  <p className="skills-helper">
+                    Click any technology below to highlight matching roles and engineering projects across the portfolio.
+                  </p>
+                </div>
+              </FI>
+
+              <div className="skills-grid">
+                {SKILL_CATEGORIES.map((cat, i) => (
+                  <FI key={cat.title} delay={i * 60}>
+                    <div className="skill-card">
+                      <div className="sk-card-head">
+                        <span className="sk-title">{cat.title}</span>
+                        <span className="sk-count">{cat.items.length} tools</span>
+                      </div>
+                      <div className="sk-pills">
+                        {cat.items.map(skill => (
+                          <button
+                            key={skill}
+                            className={`sk-pill${selectedSkill === skill ? ' active' : ''}`}
+                            onClick={() => {
+                              const next = selectedSkill === skill ? null : skill;
+                              setSelectedSkill(next);
+                            }}
+                          >
+                            {skill}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  </FI>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* ── 04: ABOUT & EDUCATION ── */}
+          <section id="about">
+            <div className="ghost-num">04</div>
+            <div className="wrap">
+              <FI>
+                <span className="sec-label">04 — Background &amp; Academic Foundation</span>
+                <h2 className="sec-title">Education &amp; Ethos</h2>
+              </FI>
+
+              <FI delay={70}>
+                <p className="about-pullquote">
+                  I build where <em>statistical rigor</em> meets <em>low-latency systems</em> — prioritizing
+                  correctness, throughput, and explainability in every pipeline I ship.
+                </p>
+              </FI>
+
+              <div className="about-grid">
+                <FI delay={120}>
+                  <div>
+                    <div className="about-text">
+                      <p>
+                        I'm studying <strong>Statistics with a Computer Science Concentration</strong> at the
+                        <strong> University of British Columbia</strong>, focusing on scalable data engineering,
+                        AI agent infrastructure, and quantitative modeling.
+                      </p>
+                      <p>
+                        At <strong>Mackenzie Investments</strong>, I engineer automated Azure &amp; Python ETL pipelines
+                        and Power Platform governance tools for the 30-person Trust Accounting division, saving ~100 hours/week.
+                        In January 2027, I will join <strong>Ericsson</strong> in Ottawa for an 8-month Data Engineer Co-op
+                        building Java, C# (.NET), and SQL Server telemetry pipelines.
+                      </p>
+                      <p>
+                        Beyond enterprise data engineering, I contribute upstream to <strong>vLLM</strong>, lead
+                        explainable portfolio attribution research at <strong>UBC Trading Group</strong>, and founded
+                        <strong> StatGit</strong> to bring sub-45ms behavioral observability to AI agents.
+                      </p>
+                    </div>
+
+                    <div className="edu-card">
+                      <div className="edu-header">
+                        <div className="edu-school">University of British Columbia</div>
+                        <div className="edu-date">Sept 2023 — May 2028</div>
+                      </div>
+                      <div className="edu-degree">
+                        Bachelor of Science in Statistics, Computer Science Concentration · Vancouver, BC
+                      </div>
+                      <span className="coursework-label">Relevant Coursework</span>
+                      <div className="coursework-pills">
+                        {[
+                          'Data Structures & Algorithms',
+                          'Databases',
+                          'Software Construction',
+                          'Machine Learning',
+                          'Statistical Inference',
+                          'Linear Algebra',
+                        ].map(c => <span key={c} className="cw-pill">{c}</span>)}
+                      </div>
+                    </div>
+                  </div>
+                </FI>
+
+                <FI delay={180}>
+                  <div className="currently-box">
+                    <div className="curr-label">Live Telemetry</div>
+                    {[
+                      { k: 'Current Role', v: 'AI Automation Intern @ Mackenzie' },
+                      { k: 'Incoming (Jan 2027)', v: 'Data Engineer Co-op @ Ericsson' },
+                      { k: 'Quant Research', v: 'Portfolio Construction @ UBCTG' },
+                      { k: 'Founder', v: 'StatGit (2 B2B Design LOIs)' },
+                      { k: 'Open Source', v: 'vLLM Contributor (PR #43305)' },
+                      { k: 'Degree', v: 'BSc Statistics & CS @ UBC' },
+                      { k: 'Next Availability', v: 'Fall 2027 / Summer 2027 Roles' },
+                    ].map(row => (
+                      <div key={row.k} className="curr-row">
+                        <span className="curr-k">{row.k}</span>
+                        <span className="curr-v">{row.v}</span>
+                      </div>
+                    ))}
+                  </div>
+                </FI>
+              </div>
+            </div>
+          </section>
+
+          {/* ── 05: CONTACT ── */}
+          <section id="contact">
+            <div className="ghost-num">05</div>
+            <div className="wrap">
+              <FI>
+                <div className="contact-big">
+                  Hiring for top engineering teams? <em>Let's talk.</em>
+                </div>
+              </FI>
+
+              <div className="contact-grid">
+                <FI delay={80}>
+                  <div>
+                    <p className="contact-sub">
+                      Always excited to connect with recruiters, engineering managers, and researchers working on
+                      <em> data infrastructure</em>, <em>distributed systems</em>, and <em>applied AI</em>.
+                    </p>
+                    <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+                      <button className="btn-primary" onClick={() => setResumeOpen(true)}>
+                        View &amp; Print Resume
+                      </button>
+                      <button className="btn-secondary" onClick={copyEmail}>
+                        Copy Email Address
+                      </button>
+                    </div>
+                  </div>
+                </FI>
+
+                <FI delay={140}>
+                  <div className="contact-links">
+                    <button className="c-link" onClick={copyEmail}>
+                      <div className="c-inner">
+                        <span className="c-type">Email (Click to Copy)</span>
+                        <span className="c-val">aarya09@gmail.com</span>
+                      </div>
+                      <span className="c-arr">COPY ⧉</span>
+                    </button>
+
+                    <a className="c-link" href="https://github.com/Git-Aarya" target="_blank" rel="noopener noreferrer">
+                      <div className="c-inner">
+                        <span className="c-type">GitHub</span>
+                        <span className="c-val">github.com/Git-Aarya</span>
+                      </div>
+                      <span className="c-arr">↗</span>
+                    </a>
+
+                    <a className="c-link" href="https://www.linkedin.com/in/aarya-chaurasia/" target="_blank" rel="noopener noreferrer">
+                      <div className="c-inner">
+                        <span className="c-type">LinkedIn</span>
+                        <span className="c-val">linkedin.com/in/aarya-chaurasia</span>
+                      </div>
+                      <span className="c-arr">↗</span>
+                    </a>
+
+                    <a className="c-link" href="https://statgit.com/" target="_blank" rel="noopener noreferrer">
+                      <div className="c-inner">
+                        <span className="c-type">StatGit Platform</span>
+                        <span className="c-val">statgit.com</span>
+                      </div>
+                      <span className="c-arr">↗</span>
+                    </a>
+                  </div>
+                </FI>
+              </div>
+            </div>
+          </section>
+
+          {/* ── FOOTER ── */}
+          <footer>
+            <div className="foot-l">
+              <span>Aarya Chaurasia · Vancouver, BC &amp; Toronto, ON</span>
+              <span>·</span>
+              <span>UBC BSc Statistics &amp; Computer Science</span>
+            </div>
+            <div className="foot-r">
+              <button className="foot-btn" onClick={() => setCmdOpen(true)}>⌘K Command Palette</button>
+              <button
+                className="foot-btn"
+                onClick={() => document.getElementById('tweaks-panel').classList.toggle('on')}
+              >
+                ⊙ Theme Tweaks
+              </button>
+            </div>
+          </footer>
+
+          {/* ── MODALS & TOAST ── */}
+          {resumeOpen && <ResumeModal onClose={() => setResumeOpen(false)} showToast={triggerToast} />}
+          {cmdOpen && (
+            <CommandPalette
+              onClose={() => setCmdOpen(false)}
+              onOpenResume={() => setResumeOpen(true)}
+              showToast={triggerToast}
+            />
+          )}
+          {toast && <div className="toast-msg">{toast}</div>}
+        </>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
 </body>
+
 </html>
